@@ -38,6 +38,8 @@
                                                     class="material-icons margin-right-1 font-size-20 text-ac">done</i>Individuelle Widmung</p>
                                         <p class="small light"><i
                                                     class="material-icons margin-right-1 font-size-20 text-ac">done</i>Als PDF druckbar</p>
+                                            <p class="small light"><i
+                                                    class="material-icons margin-right-1 font-size-20 text-ac">done</i>Nur in Crailsheim gültig</p>
 
 
                                             <p class="light small margin-top-1">Auf der nächsten Seite können Sie
