@@ -223,8 +223,9 @@
                                 <input type="text" class=" text-center hidden" id="created_at_two"
                                        value="{{ $domenic12->created_at }}"
                                        name="created_at_two">
-                                <button type="submit" class="button ac-ln-button-2">Jetzt Bankdaten hinterlegen
+                                <button type="submit" class="button blue">Jetzt Bankdaten hinterlegen
                                 </button>
+                                <p class="small text-black">Hinweis: Nachdem Sie "Jetzt Bankdaten hinterlegen" geklickt haben, dauert es ca. 10 Sekunden bis Sie weitergeleitet werden.</p>
                             </div>
                         </li>
                     </ul>
