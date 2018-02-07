@@ -595,7 +595,7 @@ class CampaignsController extends Controller
             $transaction_id = 'reid' . time() . str_random(5);
         }
         $transaction_id = strtoupper($transaction_id);
-
+        $rechnungsnummer = 'RE_' . str_random(5);
         $payments_data = [
             'campaign_id' => $campaign->id,
             'reward_id' => session('cart.reward_id'),
@@ -607,6 +607,7 @@ class CampaignsController extends Controller
             'adresse' => $request->adresse,
             'postleitzahl' => $request->postleitzahl,
             'stadt' => $request->stadt,
+            'rechnungsnummer' => $rechnungsnummer,
             'land' => $request->land,
             'created_at_two' => $request->created_at_two,
             'widmung' => $request->widmung,
@@ -892,6 +893,7 @@ class CampaignsController extends Controller
             $transaction_id = 'reid' . time() . str_random(5);
         }
         $transaction_id = strtoupper($transaction_id);
+        $rechnungsnummer = 'RE_' . str_random(5);
 
         $payments_data = [
             'campaign_id' => $campaign->id,
@@ -915,6 +917,7 @@ class CampaignsController extends Controller
             'name' => $request->name,
             'stadt' => $request->stadt,
             'land' => $request->land,
+            'rechnungsnummer' => $rechnungsnummer,
 
 
             'contributor_name_display' => session('cart.contributor_name_display'),
@@ -928,7 +931,7 @@ class CampaignsController extends Controller
         ];
         //Create payment and clear it from session
         $created_payment = Payment::create($payments_data);
-        //Create PDF And send it
+
         $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
         $pdf2 = PDF::loadView('pdf.pdf_rechnung', $payments_data);
         Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request)
@@ -944,9 +947,7 @@ class CampaignsController extends Controller
             $message->bcc('sunshinewellness@web.de');
             $message->attachData($pdf2->output(), "rechnung.pdf");
         });
-
         $request->session()->forget('cart');
-
         return view('admin.checkout_empty', compact('title', 'user',
             'domenic2', $domenic2, $domenic3, 'domenic3',
             'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7, 'domenic7',

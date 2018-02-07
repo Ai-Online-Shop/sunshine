@@ -95,7 +95,7 @@
 <p class="center"><b>Zahlart: </b> Vorkasse</p>
 <p class="margin">
 <h2 class="center margin-2"><strong>Rechnung</strong>
-    <span class="margin-4">RE-Nr: SUN-GU2018-{{$gutschein_id}}</span>
+    <span class="margin-4">RE-Nr: {{$rechnungsnummer}}</span>
     <span class="margin-4">Datum: {{ $created_at_two }}</span></h2>
 <table>
     <thead>
