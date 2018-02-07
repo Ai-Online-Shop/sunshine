@@ -33,18 +33,18 @@
                         <div class="ae-2 text-white"><p>Baden, Saunieren und Wellness an einem Ort! Der perfekte Platz
                                 um den Alltag hinter sich zu lassen.</p></div>
                     </div>
-                    <div class="fix-10-12">
+                    <div class="fix-11-12">
                         <ul class="grid later equal">
                             <li class="col-6-12 margin-top-3">
                                 <div class="fix-5-12 crop">
                                     <div class="pad shadow ae-3">
-                                        <img src="{{ asset('assets/img/schenkenseebad-1.jpg') }}"
+                                        <img src="{{ asset('assets/img/slider-22.jpg') }}"
                                              class="ae-4 margin-bottom-2"
                                              alt="Sunshine Wellness Schenkenseestraße 67, 74523 Schwäbisch Hall"/>
                                         <p class="hero crop bold ae-5">Schwäbisch-Hall</p>
-                                        <div class="ae-6 "><p class="small crop equalElement">Schenkenseestraße 67,
+                                        <div class="ae-6 "><p class="small cropTop equalElement">Schenkenseestraße 67,
                                                 74523 Schwäbisch Hall</p></div>
-                                        <a href="{{ route('sha') }}" class="button orange uppercase wide crop ae-7">Zur
+                                        <a href="{{ route('sha') }}" class="button orange uppercase wide cropBottom ae-7">Zur
                                             Website</a>
                                     </div>
                                 </div>
@@ -55,9 +55,9 @@
                                         <img src="{{ asset('assets/img/slider-1.jpg') }}" class="ae-5 margin-bottom-2"
                                              alt="Sunshine Wellness Haller Straße 185, 74564 Crailsheim"/>
                                         <p class="hero crop bold ae-6">Crailsheim</p>
-                                        <div class="ae-7"><p class="small crop equalElement">Haller Straße 185, <br/>74564
+                                        <div class="ae-7"><p class="small cropTop equalElement">Haller Straße 185, <br/>74564
                                                 Crailsheim</p></div>
-                                        <a href="{{ route('home') }}" class="button uppercase orange wide crop ae-8">Zur
+                                        <a href="{{ route('home') }}" class="button uppercase orange cropBottom wide ae-8">Zur
                                             Website</a>
                                     </div>
                                 </div>

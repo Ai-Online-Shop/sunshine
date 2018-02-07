@@ -411,7 +411,6 @@ class CampaignsController extends Controller
             $payments_data = [
                 'ccv' => $request->ccv,
                 'gutschein_id' => $gutschein_id,
-                'upsale' => $request->upsale,
                 'versandart' => $request->versandart,
                 'amount' => $request->amount,
                 'nachname' => $request->nachname,
@@ -480,7 +479,6 @@ class CampaignsController extends Controller
         }
 
         if (session('cart')) {
-            $domenic = Gutschein::orderBy('created_at', 'desc')->first(['upsale']);
             $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
             $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
             $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname']);
@@ -494,7 +492,7 @@ class CampaignsController extends Controller
             $domenic12 = Gutschein::orderBy('created_at', 'desc')->first(['created_at']);
 
 
-            $total = number_format(($domenic->upsale)+($domenic2->versandart)+($domenic3->amount), 2);
+            $total = number_format(($domenic2->versandart)+($domenic3->amount), 2);
 
             session(['cart' => [
                 'cart_type' => 'donation',
@@ -502,7 +500,7 @@ class CampaignsController extends Controller
 
                 'amount' => number_format($total, 2)]]);
 
-            return view('admin.checkout', compact('title', 'campaign', 'reward', 'user', 'domenic', $domenic,
+            return view('admin.checkout', compact('title', 'campaign', 'reward', 'user',
                 'domenic2', $domenic2, $domenic3, 'domenic3', $request, 'request', $total, 'total',
                 'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7, 'domenic7',$domenic8, 'domenic8',$domenic9, 'domenic9',$domenic10, 'domenic10',$domenic11, 'domenic11',$domenic12, 'domenic12'));
         }
@@ -529,7 +527,6 @@ class CampaignsController extends Controller
         } elseif (session('cart.cart_type') == 'donation') {
             $campaign = Campaign::find(session('cart.campaign_id'));
         }
-        $domenic = Gutschein::orderBy('created_at', 'desc')->first(['upsale']);
         $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
         $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
         $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname']);
@@ -544,7 +541,6 @@ class CampaignsController extends Controller
 
         //dd(session('cart'));
         return view('admin.payment', compact('title', 'user', 'campaign',
-            'domenic', $domenic,
             'domenic2', $domenic2, $domenic3, 'domenic3',
             'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7,
             'domenic7',$domenic8, 'domenic8',$domenic9, 'domenic9',$domenic10, 'domenic10',$domenic11, 'domenic11',$domenic12, 'domenic12'));
@@ -558,7 +554,6 @@ class CampaignsController extends Controller
      */
     public function paypalRedirect(Request $request)
     {
-        $domenic = Gutschein::orderBy('created_at', 'desc')->first(['upsale']);
         $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
         $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
         $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname']);
@@ -574,7 +569,6 @@ class CampaignsController extends Controller
 
         if (!session('cart')) {
             return view('admin.checkout_empty', compact('title', 'user',
-                'domenic', $domenic,
                 'domenic2', $domenic2, $domenic3, 'domenic3',
                 'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7, 'domenic7',$domenic8, 'domenic8',$domenic9,
                 'domenic9',$domenic10, 'domenic10',$domenic11, 'domenic11',$domenic12, 'domenic12'));
@@ -606,7 +600,6 @@ class CampaignsController extends Controller
             'campaign_id' => $campaign->id,
             'reward_id' => session('cart.reward_id'),
 
-            'upsale' => $request->upsale,
             'versandart' => $request->versandart,
             'gutschein' => $request->gutschein,
             'name' => $request->name,
@@ -832,7 +825,6 @@ class CampaignsController extends Controller
      */
     public function paymentBankTransferReceive(Request $request)
     {
-        $domenic = Gutschein::orderBy('created_at', 'desc')->first(['upsale']);
         $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
         $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
         $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname']);
@@ -852,7 +844,6 @@ class CampaignsController extends Controller
             'branch_name' => 'required',
             'branch_address' => 'required',
             'account_name' => 'required',
-            'upsale' => 'required',
             'versandart' => 'required',
             'gutschein' => 'required',
             'gutschein_id' => 'required',
@@ -907,7 +898,6 @@ class CampaignsController extends Controller
             'created_at_two' => $request->created_at_two,
 
 
-            'upsale' => $request->upsale,
             'versandart' => $request->versandart,
             'gutschein' => $request->gutschein,
             'gutschein_id' => $request->gutschein_id,
@@ -943,7 +933,6 @@ class CampaignsController extends Controller
         $request->session()->forget('cart');
 
         return view('admin.checkout_empty', compact('title', 'user',
-            'domenic', $domenic,
             'domenic2', $domenic2, $domenic3, 'domenic3',
             'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7, 'domenic7',
             $domenic8, 'domenic8',$domenic9, 'domenic9',$domenic10, 'domenic10',$domenic11, 'domenic11',$domenic12, 'domenic12'));

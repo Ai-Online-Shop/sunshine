@@ -28,9 +28,6 @@
                                                    name="gutschein">
                                             <input type="text" class=" text-center hidden " id="gutschein_id"
                                                    value="{{ $domenic7->gutschein_id }}" name="gutschein_id">
-                                            <input type="text" class=" text-center hidden" id="upsale"
-                                                   value="{{ $domenic->upsale }}"
-                                                   name="upsale">
                                             <input type="text" class=" text-center hidden" id="versandart"
                                                    value="{{ $domenic2->versandart }}"
                                                    name="versandart">
@@ -205,9 +202,6 @@
                                 <input type="text" class=" text-center hidden" id="gutschein"
                                        value="{{ $domenic3->amount }}"
                                        name="gutschein">
-                                <input type="text" class=" text-center hidden" id="upsale"
-                                       value="{{ $domenic->upsale }}"
-                                       name="upsale">
                                 <input type="text" class=" text-center hidden" id="versandart"
                                        value="{{ $domenic2->versandart }}"
                                        name="versandart">

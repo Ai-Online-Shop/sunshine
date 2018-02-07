@@ -29,7 +29,7 @@
                                     <h3 class="big ae-5">Suwarat Haag (Amika)</h3>
                                     <p class="big ae-5">Schenkenseestraße 67,</p>
                                     <p class="big ae-6">74523 Schwäbisch Hall</p>
-                                    <p class="margin-top-3 big ae-7">Tel.: 07951/2977641</p>
+                                    <p class="margin-top-3 big ae-7">Tel.: 0791 401 81 03</p>
                                     <p class="big ae-7">E-Mail: amikahaag@gmail.com</p>
 
 

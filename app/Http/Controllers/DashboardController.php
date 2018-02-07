@@ -112,6 +112,17 @@ class DashboardController extends Controller
 
         return response()->download($file, 'angebote.pdf', $headers);
     }
+    public function downloadsha()
+    {
+        //PDF file is stored under project/public/download/info.pdf
+        $file= public_path(). "/assets/PDF/preise-sha.pdf";
+
+        $headers = [
+            'Content-Type' => 'application/pdf',
+        ];
+
+        return response()->download($file, 'preise.pdf', $headers);
+    }
 
     public function support(){
 

@@ -68,21 +68,7 @@
                                                             @endif
                                                         </div>
 
-                                                        <h3 class="margin-top-1 left"><strong>3. Möchten Sie ein
-                                                                Geschenkpaket?</strong>
-                                                        </h3>
-
-
-                                                        <select class="form-control select2" name="upsale" id="upsale"
-                                                                required>
-                                                            <option value="0">Bitte auswählen</option>
-                                                            <option data-val='3.50' value="9.99">Wellness Paket
-                                                                (9,99€)
-                                                            </option>
-                                                            <option value="0">Nein, Danke!</option>
-
-                                                        </select>
-                                                        <h3 class=" left"><strong>4. Bestimmen Sie die
+                                                        <h3 class=" left"><strong>3. Bestimmen Sie die
                                                                 Versandart</strong></h3>
                                                         <select class="form-control select2" name="versandart"
                                                                 id="versandart" required>
@@ -93,7 +79,7 @@
                                                         </select>
 
 
-                                                        <h3 class="margin-top-1 left"><strong>5. Informationen zum
+                                                        <h3 class="margin-top-1 left"><strong>4. Informationen zum
                                                                 Empfänger</strong></h3>
                                                         <p class="micro light left">(Bitte tragen Sie die Daten des
                                                             Empfängers

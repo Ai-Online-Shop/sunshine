@@ -53,6 +53,7 @@ Route::get('verified', ['as' => 'verified', 'uses' => 'DashboardController@verif
 Route::get('/downloadImmo', 'DashboardController@getDownload');
 Route::get('/downloadImmo2', 'DashboardController@getDownload2');
 Route::get('/downloadImmo3', 'DashboardController@getDownload3');
+Route::get('/downloadsha', 'DashboardController@downloadsha');
 Route::get('/downloadImmo4', 'DashboardController@getDownload4');
 
 

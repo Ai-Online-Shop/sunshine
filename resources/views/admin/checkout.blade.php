@@ -30,9 +30,6 @@
                                     <input type="text" class="form-control text-center hidden" id="gutschein"
                                            value="{{ $domenic3->amount }}"
                                            name="gutschein">
-                                    <input type="text" class="form-control text-center hidden" id="upsale"
-                                           value="{{ $domenic->upsale }}"
-                                           name="upsale">
                                     <input type="text" class="form-control text-center hidden" id="versandart"
                                            value="{{ $domenic2->versandart }}"
                                            name="versandart">
@@ -63,12 +60,6 @@
                                             <th>Gutscheinhöhe:</th>
                                             <td>{{get_amount($domenic3->amount)}}</td>
                                         </tr>
-                                        @if($domenic->upsale > 1)
-                                        <tr>
-                                            <th>Paket:</th>
-                                            <td>{{ get_amount($domenic->upsale) }}</td>
-                                        </tr>
-                                        @endif
 
                                         <tr>
                                             <th>Versandkosten:</th>

@@ -104,7 +104,12 @@
                                 <ul class="flex fixedSpaces later left">
                                     <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
                                         <a class="margin-bottom-2"><img class="img-91 wide" src="{{ asset('assets/img/slider-2.jpg') }}" alt="Image Thumbnail"/></a>
-                                        <h3>Daeng</h3>
+                                        <h3>Deang</h3>
+                                        <p class="small">Masseurin</p>
+                                    </li>
+                                    <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
+                                        <a class="margin-bottom-2"><img class="img-91 wide" src="{{ asset('assets/img/slider-2.jpg') }}" alt="Image Thumbnail"/></a>
+                                        <h3>Sari</h3>
                                         <p class="small">Masseurin</p>
                                     </li>
                                     <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
@@ -114,12 +119,7 @@
                                     </li>
                                     <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
                                         <a class="margin-bottom-2"><img class="img-91 wide" src="{{ asset('assets/img/slider-2.jpg') }}" alt="Image Thumbnail"/></a>
-                                        <h3>Name Nachname</h3>
-                                        <p class="small">Masseurin</p>
-                                    </li>
-                                    <li class="col-3-12 col-tablet-1-2 col-phone-1-1">
-                                        <a class="margin-bottom-2"><img class="img-91 wide" src="{{ asset('assets/img/slider-2.jpg') }}" alt="Image Thumbnail"/></a>
-                                        <h3>Name Nachname</h3>
+                                        <h3>Paris</h3>
                                         <p class="small">Masseurin</p>
                                     </li>
                                 </ul>

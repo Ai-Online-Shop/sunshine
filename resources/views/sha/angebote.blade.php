@@ -342,7 +342,7 @@
                                             @endif
                                             <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
                                             <h5 class="big">Laden Sie sich unsere aktuellen Preise und Angebote einfach hier herunter.</h5>
-                                            <a class="text-blue button green small rounded margin-top-3" href="/downloadImmo3">Aktuelle Preisliste</a> <br />
+                                            <a class="text-blue button green small rounded margin-top-3" href="/downloadsha">Aktuelle Preisliste</a> <br />
                                             <a class="text-blue button green small rounded margin-top-1" href="/downloadImmo4">Aktuelle Angebote</a> <br />
 
 
