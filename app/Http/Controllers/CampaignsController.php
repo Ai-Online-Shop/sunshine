@@ -623,7 +623,7 @@ class CampaignsController extends Controller
         //Create payment and clear it from session
         $created_payment = Payment::create($payments_data);
         //Create PDF And send it
-        $pdf2 = PDF::loadView('pdf.pdf_rechnung_paypal', $payments_data);
+        $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
         $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
         Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request)
         {
@@ -638,7 +638,6 @@ class CampaignsController extends Controller
             $message->bcc('sunshinewellness@web.de');
             $message->attachData($pdf2->output(), "rechnung.pdf");
         });
-
         $request->session()->forget('cart');
 
 
@@ -931,7 +930,6 @@ class CampaignsController extends Controller
         ];
         //Create payment and clear it from session
         $created_payment = Payment::create($payments_data);
-
         $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
         $pdf2 = PDF::loadView('pdf.pdf_rechnung', $payments_data);
         Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request)
