@@ -72,8 +72,8 @@
                                         </tr>
                                 </table>
 
-                                <p class="light micro">Durch Gutschein kaufen stimmen Sie unseren
-                                    <a class="text-blue" href="{{route('agb')}}"> AGB</a> zu.</p>
+                                <p class="bold">Durch Gutschein kaufen stimmen Sie unseren
+                                    <a class="text-blue" href="{{route('agb')}}"> AGB</a> und der <a class="text-blue" href="{{route('datenschutz')}}"> Datenschutzerklärung</a> zu.</p>
 
                                 <button type="submit" class="ac-ln-button-2 button">Gutschein kaufen</button>
                             </div>
