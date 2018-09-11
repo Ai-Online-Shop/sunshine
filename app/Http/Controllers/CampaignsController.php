@@ -632,7 +632,7 @@ class CampaignsController extends Controller
             $message->bcc('sunshinewellness@web.de');
             $message->attachData($pdf->output(), "gutschein.pdf");
         });
-        Mail::send('emails.orders.shipped_rechnung', $payments_data, function ($message) use ($pdf2, $request, $campaign) {
+        Mail::send('emails.orders.shipped_rechnung', $payments_data, function ($message) use ($pdf2, $request) {
             $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
             $message->to($request->email)->subject('Rechnung als PDF im Anhang');
             $message->bcc('sunshinewellness@web.de');

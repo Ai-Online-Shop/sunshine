@@ -41,7 +41,7 @@
     }
 
 </style>
-<img class="bild" src="http://sunshinewellness.de/assets/img/gutschein-top{{$campaign->id}}.jpg">
+<img class="bild" src="http://sunshinewellness.de/assets/img/gutschein-top{{$campaign_id}}.jpg">
 <p class="margin">
     <h1 class="center margin-2"><strong>{{$gutschein}} Euro</strong></h1>
     <p class="center"><strong>{{$gutschein_id}}</strong></p>
