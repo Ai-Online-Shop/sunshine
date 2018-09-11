@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Sunshine Wellness</title>
+    <title>Sunshine Wellness Gelbinger-Gasse</title>
     @yield('meta-data')
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Material+Icons"
           rel="stylesheet" type="text/css"/>
@@ -158,16 +158,16 @@
         </div>
         <div class="center">
             <ul class="menu">
-                <li><a href="{{ route('sha') }}">Start</a></li>
-                <li><a href="{{ route('sha/angebote') }}">Angebote</a></li>
-                <li><a href="{{ route('sha/impressionen') }}">Impressionen</a></li>
-                <li><a href="{{ route('sha/team') }}">Team</a></li>
-                <li><a href="{{ route('sha/kontakt') }}">Kontakt</a></li>
+                <li><a href="{{ route('gelbinger') }}">Start</a></li>
+                <li><a href="{{ route('gelbinger/angebote') }}">Angebote</a></li>
+                <li><a href="{{ route('gelbinger/impressionen') }}">Impressionen</a></li>
+                <li><a href="{{ route('gelbinger/team') }}">Team</a></li>
+                <li><a href="{{ route('gelbinger/kontakt') }}">Kontakt</a></li>
             </ul>
         </div>
         <div class="right">
             <ul class="menu-2">
-                <li><span class="margin-right-1 ac-ln-button"><a href="{{ route('sha/termin') }}">Termin</a></span>
+                <li><span class="margin-right-1 ac-ln-button"><a href="{{ route('gelbinger/termin') }}">Termin</a></span>
                 </li>
                 <li><span class="margin-right-1 ac-ln-button"><a href="{{ route('gutschein') }}">Gutschein</a></span>
                 </li>
@@ -202,15 +202,15 @@
 
     <ul class="mainMenu">
         <!--User ist ausgeloggt-->
-        <li><a href="{{ route('sha') }}"><i class="margin-left-1 material-icons margin-right-1">spa</i>Start</a></li>
-        <li><a href="{{ route('sha/angebote') }}"><i class="margin-left-1 material-icons margin-right-1">local_offer</i>Angebote</a>
+        <li><a href="{{ route('gelbinger') }}"><i class="margin-left-1 material-icons margin-right-1">spa</i>Start</a></li>
+        <li><a href="{{ route('gelbinger/angebote') }}"><i class="margin-left-1 material-icons margin-right-1">local_offer</i>Angebote</a>
         </li>
-        <li><a href="{{ route('sha/impressionen') }}"><i class="margin-left-1 material-icons margin-right-1">picture_in_picture</i>Impressionen</a>
+        <li><a href="{{ route('gelbinger/impressionen') }}"><i class="margin-left-1 material-icons margin-right-1">picture_in_picture</i>Impressionen</a>
         </li>
-        <li><a href="{{ route('sha/team') }}"><i class="margin-left-1 material-icons margin-right-1">people</i>Team</a></li>
-        <li><a href="{{ route('sha/kontakt') }}"><i class="margin-left-1 material-icons margin-right-1">phone</i>Kontakt</a>
+        <li><a href="{{ route('gelbinger/team') }}"><i class="margin-left-1 material-icons margin-right-1">people</i>Team</a></li>
+        <li><a href="{{ route('gelbinger/kontakt') }}"><i class="margin-left-1 material-icons margin-right-1">phone</i>Kontakt</a>
         </li>
-        <li><a href="{{ route('sha/termin') }}"><i class="margin-left-1 material-icons margin-right-1">event</i>Termin</a>
+        <li><a href="{{ route('gelbinger/termin') }}"><i class="margin-left-1 material-icons margin-right-1">event</i>Termin</a>
         </li><li><a href="{{ route('gutschein') }}"><i class="margin-left-1 material-icons margin-right-1">card_giftcard</i>Gutschein</a>
         </li>
         <li><a href="https://wolf-gate.com">© 2018 Wolf-Gate</a>
@@ -219,12 +219,29 @@
     </ul>
 </nav>
 {{ $slot }}
+<section class="slide autoHeight background-blue">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+
+                <div class="fix-10-12">
+
+                    <div class="ae-2"><h1 class="text-white small"><strong>Schenken Sie ihren Freunden <br /> dieses Jahr ein Erlebnis.<br /></strong></h1></div>
+                    <a class="button stroke margin-top-2 rounded ae-4 small white" href="{{route('gutschein')}}">Jetzt Gutschein kaufen</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 <section class="slide autoHeight" style="background-color:#000;">
     <div class="content">
         <div class="container">
             <div class="wrap">
                 <ul class="flex fix-10-12 ae-1 light micro text-white">
                     <li class="col-4-12"><p><a href="{{route('home')}}">Sunshine Wellness Crailsheim</a></p></li>
+                    <li class="col-4-12"><p><a href="{{route('sha')}}">Sunshine Wellness Schwäbisch Hall</a></p></li>
                     <li class="col-4-12"><p><a href="{{route('impressum')}}">Impressum</a></p></li>
                     <li class="col-4-12"><p><a href="{{route('agb')}}">Allgemeine Geschäftsbedingungen</a></p></li>
                 </ul>
@@ -241,11 +258,11 @@
                     </li>
                     <li class="col-3-12 left col-tablet-1-1 nav-text ae-3">
                         <p class="margin-top-2"><strong>Navigation</strong></p>
-                        <p><a href="{{route('sha')}}">Start</a></p>
-                        <p><a href="{{route('sha/angebote')}}">Angebote</a></p>
-                        <p><a href="{{route('sha/impressionen')}}">Impressionen</a></p>
-                        <p><a href="{{route('sha/team')}}">Team</a></p>
-                        <p><a href="{{route('sha/kontakt')}}">Kontakt</a></p>
+                        <p><a href="{{route('gelbinger')}}">Start</a></p>
+                        <p><a href="{{route('gelbinger/angebote')}}">Angebote</a></p>
+                        <p><a href="{{route('gelbinger/impressionen')}}">Impressionen</a></p>
+                        <p><a href="{{route('gelbinger/team')}}">Team</a></p>
+                        <p><a href="{{route('gelbinger/kontakt')}}">Kontakt</a></p>
                     </li>
                     <li class="col-5-12 left col-tablet-1-1 nav-text ae-6">
                         <p class="margin-top-2"><strong>Besuchen Sie uns auf Facebook</strong></p>

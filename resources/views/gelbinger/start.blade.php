@@ -1,4 +1,4 @@
-@component('layouts.start')
+@component('layouts.gelbinger')
     <style>
         .slideshow .background {
             opacity: 0;
@@ -33,9 +33,9 @@
                         <div class="ae-2 text-white"><p>Baden, Saunieren und Wellness an einem Ort! Der perfekte Platz
                                 um den Alltag hinter sich zu lassen.</p></div>
                     </div>
-                    <div class="fix-12-12">
+                    <div class="fix-11-12">
                         <ul class="grid later equal">
-                            <li class="col-4-12 margin-top-3">
+                            <li class="col-6-12 margin-top-3">
                                 <div class="fix-5-12 crop">
                                     <div class="pad shadow ae-3">
                                         <img src="{{ asset('assets/img/slider-22.jpg') }}"
@@ -49,7 +49,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="col-4-12 margin-top-3">
+                            <li class="col-6-12 margin-top-3">
                                 <div class="fix-5-12 crop">
                                     <div class="pad shadow ae-4">
                                         <img src="{{ asset('assets/img/slider-1.jpg') }}" class="ae-5 margin-bottom-2"
@@ -57,18 +57,6 @@
                                         <p class="hero crop bold ae-6">Crailsheim</p>
                                         <div class="ae-7"><p class="small cropTop equalElement">„Im CaRe Haus"</p></div>
                                         <a href="{{ route('home') }}" class="button uppercase orange cropBottom wide ae-8">Zur
-                                            Website</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-4-12 margin-top-3">
-                                <div class="fix-5-12 crop">
-                                    <div class="pad shadow ae-4">
-                                        <img src="{{ asset('assets/img/gelbinger-slider-5.jpg') }}" class="ae-5 margin-bottom-2"
-                                             alt="Sunshine Wellness Gelbinger Gasse 21, 74523 Schwäbisch Hall"/>
-                                        <p class="hero crop bold ae-6">Gelbinger Gasse</p>
-                                        <div class="ae-7"><p class="small cropTop equalElement">„Gelbinger Gasse 21"</p></div>
-                                        <a href="{{ route('gelbinger') }}" class="button uppercase orange cropBottom wide ae-8">Zur
                                             Website</a>
                                     </div>
                                 </div>

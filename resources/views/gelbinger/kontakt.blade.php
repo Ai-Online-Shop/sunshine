@@ -1,4 +1,4 @@
-@component('layouts.sha')
+@component('layouts.gelbinger')
 
     <style>
         .background-green{
@@ -27,9 +27,10 @@
 
                                     <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-5 margin-top-1 ae-4"></div>
                                     <h3 class="big ae-5">Suwarat Haag (Amika)</h3>
-                                    <p class="big ae-5">Schenkenseestraße 67,</p>
+                                    <p class="big ae-5">Gelbinger Gasse 21,</p>
                                     <p class="big ae-6">74523 Schwäbisch Hall</p>
-                                    <p class="margin-top-3 big ae-7">Tel.: 01607561662</p>
+                                    <p class="margin-top-3 big ae-7">Tel.: 079197822547</p>
+                                    <p class="big ae-7">Tel.: 01608379969</p>
                                     <p class="big ae-7">E-Mail: amikahaag@gmail.com</p>
                                 </div>
                             </li>

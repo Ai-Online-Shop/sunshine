@@ -56,7 +56,7 @@
                                             <input type="hidden" name="bn"
                                                    value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest"/>
                                             <button type="submit"
-                                                    class="ac-ln-button-2 button ">
+                                                    class="blue button small">
                                                 Auswählen
                                             </button>
                                             {{ Form::close() }}
@@ -73,7 +73,7 @@
                                         <div class="cell">
                                             <h2 class="light margin-top-2"><strong>Vorkasse</strong></h2>
                                             <input type="hidden"  />
-                                            <button class="ac-ln-button-green button"
+                                            <button class="green button small"
                                                     id="bankTransferBtn">Auswählen
                                             </button>
                                         </div>
@@ -174,7 +174,7 @@
                                     </tr>
                                     <tr>
                                         <th>Verwendungszweck</th>
-                                        <td>Sun-Gutschein/2018</td>
+                                        <td>{{ $domenic7->gutschein_id }}</td>
                                     </tr>
                                 </table>
                                 <button type="submit" class="button blue">Jetzt kaufen
@@ -187,22 +187,6 @@
         </div>
     </section>
     <script>
-        $(function () {
-            $('.stripe-button').on('token', function (e, token) {
-                $('#stripeForm').replaceWith('');
-                $.ajax({
-                    url: '{{route('payment_stripe_receive')}}',
-                    type: "POST",
-                    data: {stripeToken: token.id, _token: '{{ csrf_token() }}'},
-                    success: function (data) {
-                        if (data.success == 1) {
-                            $('.checkout-wrap').html(data.response);
-                            toastr.success(data.msg, '@lang('app.success')', toastr_options);
-                        }
-                    }
-                });
-            });
-        });
         $('#bankTransferBtn').click(function () {
             $('.bankPaymetWrap').slideToggle();
         });

@@ -16,7 +16,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Sunshine Wellness</title>
+    <title>Sunshine Wellness Crailsheim</title>
 
 @yield('meta-data')
 
@@ -186,6 +186,8 @@
         </div>
         <div class="right">
             <ul class="menu-2">
+                <li><span class="margin-right-1 ac-ln-button"><a href="{{ route('termin') }}">Termin</a></span>
+                </li>
                 <li><span class="margin-right-1 ac-ln-button"><a href="{{ route('gutschein') }}">Gutschein</a></span>
                 </li>
             </ul>
@@ -225,6 +227,9 @@
         </li>
         <li><a href="{{ route('team') }}"><i class="margin-left-1 material-icons margin-right-1">people</i>Team</a></li>
         <li><a href="{{ route('kontakt') }}"><i class="margin-left-1 material-icons margin-right-1">phone</i>Kontakt</a>
+        </li>
+        <li><a href="{{ route('termin') }}"><i class="margin-left-1 material-icons margin-right-1">event</i>Termin</a>
+        </li><li><a href="{{ route('gutschein') }}"><i class="margin-left-1 material-icons margin-right-1">card_giftcard</i>Gutschein</a>
         </li>
         <li><a href="http://wolf-gate.de">© 2017 Wolf-Gate</a>
         </li>

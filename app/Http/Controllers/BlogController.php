@@ -50,6 +50,35 @@ class BlogController extends Controller
         return view('sha.kontakt');
     }
 
+
+
+    public function gelbinger_sha()
+    {
+        return view('gelbinger.sha_start');
+    }
+    public function gelbinger_angebote()
+    {
+        return view('gelbinger.angebote');
+    }
+    public function gelbinger_team()
+    {
+        return view('gelbinger.team');
+    }
+    public function gelbinger_termin()
+    {
+        return view('gelbinger.termin');
+    }public function crtermin()
+    {
+        return view('home.termin');
+    }
+    public function gelbinger_impressionen()
+    {
+        return view('gelbinger.impressionen');
+    }
+    public function gelbinger_kontakt()
+    {
+        return view('gelbinger.kontakt');
+    }
     /**
      * Show the form for creating a new resource.
      *

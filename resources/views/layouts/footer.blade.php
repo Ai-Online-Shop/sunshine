@@ -31,7 +31,7 @@
                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
                                     </svg></a>
                                 <ul class="menu margin-top-1 nav-text">
-                                    <li><span>Copyright © 2017 <a href="http://wolf-gate.de">Wolf-Gate</a> <br>
+                                    <li><span>Copyright © 2018 <a href="https://wolf-gate.com">Wolf-Gate</a> <br>
                 All rights reserved.</span></li>
                                 </ul>
                             </li>

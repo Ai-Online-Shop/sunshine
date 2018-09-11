@@ -1,7 +1,4 @@
-@extends('layouts.app')
-@section('title') @if( ! empty($title)) {{ $title }} | @endif @parent @endsection
-
-@section('content')
+@component('layouts.gelbinger')
     <!-- CUSTOM HEIGHT EXAMPLE -->
     <style>
         .pill.controller {
@@ -81,9 +78,6 @@
             background: -webkit-linear-gradient(45deg, #eb6833 50%, #ea9043 50%);
         }
     </style>
-
-
-
     <section class="slide background-red-pink">
         <div class="content">
             <div class="container">
@@ -91,7 +85,7 @@
 
                     <div class="fix-8-12">
 
-                        <iframe src="https://sunshinewellnesscrailsheim.setmore.com/bookappointment" style="width:100%; height: 500px; border:none;" name="test" scrolling="yes" frameborder="0" align=aus marginheight="0" marginwidth="0"></iframe>
+                        <iframe src="https://sunshinespa.setmore.com/bookappointment" style="width:100%; height: 500px; border:none;" name="test" scrolling="yes" frameborder="0" align=aus marginheight="0" marginwidth="0"></iframe>
 
                     </div>
 
@@ -99,5 +93,5 @@
             </div>
         </div>
     </section>
+@endcomponent
 
-@endsection

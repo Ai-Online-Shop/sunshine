@@ -28,7 +28,7 @@
                                         <svg style="width:65px;height:65px">
                                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
                                         </svg>
-                                        <h3 class="big">Gutscheinangebot</h3>
+                                        <h3 class="big">Angebot {{ $spc->title }}</h3>
                                         <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
                                         <p class="small light"><i
                                                     class="material-icons margin-right-1 font-size-20 text-ac">done</i>Ab 20€ möglich</p>
@@ -39,7 +39,7 @@
                                         <p class="small light"><i
                                                     class="material-icons margin-right-1 font-size-20 text-ac">done</i>Als PDF druckbar</p>
                                             <p class="small light"><i
-                                                    class="material-icons margin-right-1 font-size-20 text-ac">done</i>Nur in Crailsheim gültig</p>
+                                                        class="material-icons margin-right-1 font-size-20 text-ac">done</i>Nur in <span class="text-ac semiBold">{{ $spc->laufzeit_sparplan }}</span> gültig</p>
 
 
                                             <p class="light small margin-top-1">Auf der nächsten Seite können Sie

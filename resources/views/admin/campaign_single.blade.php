@@ -23,37 +23,25 @@
                             <div class="name-67 ae-1">
                                 <div class="text-left">
                                     <div class="margin-2 center">
-                                        <svg style="width:65px;height:65px">
-                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                 xlink:href="#logo"></use>
-                                        </svg>
-                                        <h3 class="big">Bitte ausfüllen:</h3>
-                                        <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
+                                        <h2 class="big">🎁💝😍</h2>
+                                        <h2 class="big bold">Gutschein Angebot <br/>{{ $campaign->laufzeit_sparplan }}</h2>
+                                        <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-1 margin-top-2"></div>
 
                                         @if($campaign->recommended_amount)
                                             {{Form::open([ 'route' => 'add_to_cart', 'class' => 'form-horizontal'])}}
 
                                             <input type="hidden" name="campaign_id"
                                                    value="{{$campaign->id}}"/>
-                                            <h3 class="margin-top-5 center"><strong>1. Gutscheinbetrag
+                                            <h3 class="margin-top-5 left"><strong>1. Gutscheinbetrag
                                                     eintragen</strong>
                                             </h3>
 
                                             <input type="number" step="1" min="20" max="10000"
                                                    name="amount" id="amount"
-                                                   class="form-control"
+                                                   class="form-control cropBottom"
                                                    value="{{$campaign->recommended_amount}}"/>
-
+                                            <p class="bold left cropTop">Häufig gewählte Gutscheine: <span class="button blue small verticalCenter">50€</span><span class="button blue small verticalCenter">75€</span><span class="button blue small verticalCenter">150€</span><span class="button blue small verticalCenter">35€</span><span class="button blue small verticalCenter">225€</span> </p>
                                             @if($campaign->amount_prefilled())
-                                                <h3 class="center margin-bottom-2"><strong>Häufig gewählte
-                                                        Gutscheine</strong></h3>
-                                                <ul class="donate-amount ">
-                                                    @foreach($campaign->amount_prefilled() as $amount_prefield)
-                                                        <li class="center donate-amount-java col-lg-6 col-md-6 col-sm-6 col-xs-6"
-                                                            data-value="{{$amount_prefield}}">{{get_amount($amount_prefield)}}</li>
-                                                    @endforeach
-                                                </ul>
-
                                                 <h3 class="left"><strong>2. Widmung eintragen (0,00€)</strong>
                                                 </h3>
                                                 <div class="form-group label-floating {{ $errors->has('ccv') ? ' has-error' : '' }}">
@@ -77,13 +65,9 @@
                                                 </select>
 
 
-                                                <h3 class="margin-top-1 left"><strong>4. Informationen zum
-                                                        Empfänger</strong></h3>
-                                                <p class="micro light left">(Bitte tragen Sie die Daten des
-                                                    Empfängers
-                                                    ein)</p>
+                                                <h3 class="margin-top-1 left"><strong>4. Informationen zur Rechnungsadresse</strong></h3>
                                                 <ul>
-                                                    <div class="col-sm-12">
+                                                    <div class="col-sm-6">
                                                         <div class="form-group label-floating {{ $errors->has('nachname') ? ' has-error' : '' }}">
                                                             <li class="control-label">Name*</li>
                                                             <input id="nachname" type="text"
@@ -96,7 +80,7 @@
                                                             </p>
                                                         @endif
                                                     </div>
-                                                    <div class="col-sm-12">
+                                                    <div class="col-sm-6">
                                                         <div class="form-group label-floating {{ $errors->has('email') ? ' has-error' : '' }}">
                                                             <li class="control-label">Email*</li>
                                                             <input id="email" type="email"
@@ -161,9 +145,8 @@
                                                     </div>
                                                 </ul>
                                                 <div class="left padding-top-2">
-                                                    <button type="submit" class="green rounded small button">
-                                                        Angebot
-                                                        auswählen
+                                                    <button type="submit" class="green rounded wide button">
+                                                        Weiter zum Checkout
                                                     </button>
 
                                                 </div>

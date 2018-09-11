@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Input;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routfgutses
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -22,12 +22,21 @@ Route::get('/sha/impressionen', ['as' => 'sha/impressionen', 'uses' => 'BlogCont
 Route::get('/sha/termin', ['as' => 'sha/termin', 'uses' => 'BlogController@termin']);
 Route::get('/sha/kontakt', ['as' => 'sha/kontakt', 'uses' => 'BlogController@kontakt']);
 
+Route::get('/gelbinger-gasse/', ['as' => 'gelbinger', 'uses' => 'BlogController@gelbinger_sha']);
+Route::get('/gelbinger-gasse/angebote', ['as' => 'gelbinger/angebote', 'uses' => 'BlogController@gelbinger_angebote']);
+Route::get('/gelbinger-gasse/team', ['as' => 'gelbinger/team', 'uses' => 'BlogController@gelbinger_team']);
+Route::get('/gelbinger-gasse/impressionen', ['as' => 'gelbinger/impressionen', 'uses' => 'BlogController@gelbinger_impressionen']);
+Route::get('/gelbinger-gasse/termin', ['as' => 'gelbinger/termin', 'uses' => 'BlogController@gelbinger_termin']);
+Route::get('/gelbinger-gasse/kontakt', ['as' => 'gelbinger/kontakt', 'uses' => 'BlogController@gelbinger_kontakt']);
+
 Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
 Route::get('angebote', ['as' => 'angebote', 'uses' => 'FunktioniertsController@index']);
 Route::get('team', ['as' => 'team', 'uses' => 'EmpfehlungController@index']);
 Route::get('termin', ['as' => 'termin', 'uses' => 'EmpfehlungController@termin']);
 Route::post('freundschaft-sended', ['as' => 'freundschaft-sended', 'uses' => 'HomeController@contactUsPostGift']);
 Route::get('impressionen', ['as' => 'impressionen', 'uses' => 'GründerController@index']);
+Route::get('/termin', ['as' => 'termin', 'uses' => 'BlogController@crtermin']);
+
 
 Route::get('kontakt', ['as' => 'kontakt', 'uses' => 'PartnerController@index']);
 Route::post('kontakt-sended', ['as' => 'partner-sended', 'uses' => 'HomeController@contactUsPostPartner']);
