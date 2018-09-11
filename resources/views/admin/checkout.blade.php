@@ -12,40 +12,6 @@
                             {{ Form::open(['class' => 'form-horizontal', 'files' => true]) }}
                             <h2 class="big bold margin-top-1">Zusammenfassung</h2>
                             <div class="gradient-line-3 gradient-left gradient-width-120 margin-top-1"></div>
-                            <div class="form-group ae-3 cropTop {{ $errors->has('full_name')? 'has-error':'' }}">
-                                <div class="col-sm-12 text-center">
-                                    <input type="text" class="form-control text-center hidden" id="name" value="{{ $domenic4->nachname }}"
-                                           name="name">
-                                    <input type="text" class="form-control text-center hidden" id="email" value="{{ $domenic6->email }}"
-                                           name="email">
-                                    <input type="text" class="form-control text-center hidden" id="gutschein_id" value="{{ $domenic7->gutschein_id }}"
-                                           name="gutschein_id">
-                                    <input type="text" class="form-control text-center hidden" id="widmung"
-                                           value="{{ $domenic5->ccv }}" name="widmung">
-                                    <input type="text" class="form-control text-center hidden" id="gutschein"
-                                           value="{{ $domenic3->amount }}"
-                                           name="gutschein">
-                                    <input type="text" class="form-control text-center hidden" id="versandart"
-                                           value="{{ $domenic2->versandart }}"
-                                           name="versandart">
-                                    <input type="text" class=" text-center hidden" id="adresse"
-                                           value="{{ $domenic8->adresse }}"
-                                           name="adresse">
-                                    <input type="text" class=" text-center hidden" id="postleitzahl"
-                                           value="{{ $domenic9->postleitzahl }}"
-                                           name="postleitzahl">
-                                    <input type="text" class=" text-center hidden" id="stadt"
-                                           value="{{ $domenic10->stadt }}"
-                                           name="stadt">
-                                    <input type="text" class=" text-center hidden" id="land"
-                                           value="{{ $domenic11->land }}"
-                                           name="land">
-                                    <input type="text" class=" text-center hidden" id="created_at_two"
-                                           value="{{ $domenic12->created_at }}"
-                                           name="created_at_two">
-                                </div>
-                            </div>
-
                             <div class="margin-2 cropTop">
                                 <table id="datatables"
                                        class="padding-bottom-3 left table table-striped table-no-bordered table-hover"

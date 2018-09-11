@@ -30,7 +30,7 @@
                                         @if($campaign->recommended_amount)
                                             {{Form::open([ 'route' => 'add_to_cart', 'class' => 'form-horizontal'])}}
 
-                                            <input type="hidden" name="campaign_id"
+                                            <input type="hidden" name="campaign_id" id="campaign_id"
                                                    value="{{$campaign->id}}"/>
                                             <h3 class="margin-top-5 left"><strong>1. Gutscheinbetrag
                                                     eintragen</strong>

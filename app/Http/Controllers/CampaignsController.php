@@ -405,7 +405,7 @@ class CampaignsController extends Controller
             //Or if comes from donate button
             session(['cart' => [
                 'cart_type' => 'donation',
-                'campaign_id' => $request->campaign_id,
+                'campaign_id' => '1',
                 'amount' => $request->amount,]]);
 
             $payments_data = [
@@ -419,6 +419,7 @@ class CampaignsController extends Controller
                 'stadt' => $request->stadt,
                 'land' => $request->land,
                 'email' => $request->email,
+                'user_id' => $request->campaign_id,
             ];
             //Create payment and clear it from session
             Gutschein::create($payments_data);
@@ -481,16 +482,6 @@ class CampaignsController extends Controller
         if (session('cart')) {
             $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
             $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
-            $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname']);
-            $domenic5 = Gutschein::orderBy('created_at', 'desc')->first(['ccv']);
-            $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email']);
-            $domenic7 = Gutschein::orderBy('created_at', 'desc')->first(['gutschein_id']);
-            $domenic8= Gutschein::orderBy('created_at', 'desc')->first(['adresse']);
-            $domenic9 = Gutschein::orderBy('created_at', 'desc')->first(['postleitzahl']);
-            $domenic10 = Gutschein::orderBy('created_at', 'desc')->first(['stadt']);
-            $domenic11 = Gutschein::orderBy('created_at', 'desc')->first(['land']);
-            $domenic12 = Gutschein::orderBy('created_at', 'desc')->first(['created_at']);
-
 
             $total = number_format(($domenic2->versandart)+($domenic3->amount), 2);
 
@@ -501,8 +492,7 @@ class CampaignsController extends Controller
                 'amount' => number_format($total, 2)]]);
 
             return view('admin.checkout', compact('title', 'campaign', 'reward', 'user',
-                'domenic2', $domenic2, $domenic3, 'domenic3', $request, 'request', $total, 'total',
-                'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7, 'domenic7',$domenic8, 'domenic8',$domenic9, 'domenic9',$domenic10, 'domenic10',$domenic11, 'domenic11',$domenic12, 'domenic12'));
+                'domenic2', $domenic2, $domenic3, 'domenic3', $request, 'request', $total, 'total'));
         }
 
 
@@ -529,21 +519,12 @@ class CampaignsController extends Controller
         }
         $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
         $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
-        $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname']);
-        $domenic5 = Gutschein::orderBy('created_at', 'desc')->first(['ccv']);
-        $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email']);
         $domenic7 = Gutschein::orderBy('created_at', 'desc')->first(['gutschein_id']);
-        $domenic8= Gutschein::orderBy('created_at', 'desc')->first(['adresse']);
-        $domenic9 = Gutschein::orderBy('created_at', 'desc')->first(['postleitzahl']);
-        $domenic10 = Gutschein::orderBy('created_at', 'desc')->first(['stadt']);
-        $domenic11 = Gutschein::orderBy('created_at', 'desc')->first(['land']);
-        $domenic12 = Gutschein::orderBy('created_at', 'desc')->first(['created_at']);
+        $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email'])->email;
 
         //dd(session('cart'));
         return view('admin.payment', compact('title', 'user', 'campaign',
-            'domenic2', $domenic2, $domenic3, 'domenic3',
-            'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7,
-            'domenic7',$domenic8, 'domenic8',$domenic9, 'domenic9',$domenic10, 'domenic10',$domenic11, 'domenic11',$domenic12, 'domenic12'));
+            'domenic2', $domenic2, $domenic3, 'domenic3',$domenic7,'domenic7', $domenic6, 'domenic6'));
     }
 
     /**
@@ -554,17 +535,18 @@ class CampaignsController extends Controller
      */
     public function paypalRedirect(Request $request)
     {
-        $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
-        $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
-        $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname']);
-        $domenic5 = Gutschein::orderBy('created_at', 'desc')->first(['ccv']);
-        $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email']);
-        $domenic7 = Gutschein::orderBy('created_at', 'desc')->first(['gutschein_id']);
-        $domenic8= Gutschein::orderBy('created_at', 'desc')->first(['adresse']);
-        $domenic9 = Gutschein::orderBy('created_at', 'desc')->first(['postleitzahl']);
-        $domenic10 = Gutschein::orderBy('created_at', 'desc')->first(['stadt']);
-        $domenic11 = Gutschein::orderBy('created_at', 'desc')->first(['land']);
-        $domenic12 = Gutschein::orderBy('created_at', 'desc')->first(['created_at']);
+        $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart'])->versandart;
+        $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount'])->amount;
+        $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname'])->nachname;
+        $domenic5 = Gutschein::orderBy('created_at', 'desc')->first(['ccv'])->ccv;
+        $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email'])->email;
+        $domenic7 = Gutschein::orderBy('created_at', 'desc')->first(['gutschein_id'])->gutschein_id;
+        $domenic8= Gutschein::orderBy('created_at', 'desc')->first(['adresse'])->adresse;
+        $domenic9 = Gutschein::orderBy('created_at', 'desc')->first(['postleitzahl'])->postleitzahl;
+        $domenic10 = Gutschein::orderBy('created_at', 'desc')->first(['stadt'])->stadt;
+        $domenic11 = Gutschein::orderBy('created_at', 'desc')->first(['land'])->land;
+        $domenic12 = Gutschein::orderBy('created_at', 'desc')->first(['created_at'])->created_at;
+        $domenic13 = Gutschein::orderBy('created_at', 'desc')->first(['user_id'])->user_id;
 
 
         if (!session('cart')) {
@@ -600,23 +582,24 @@ class CampaignsController extends Controller
             'campaign_id' => $campaign->id,
             'reward_id' => session('cart.reward_id'),
 
-            'versandart' => $request->versandart,
-            'gutschein' => $request->gutschein,
-            'name' => $request->name,
+            'versandart' => $domenic2,
+            'gutschein' => $domenic3,
+            'name' => $domenic4,
             'email' => $request->email,
-            'adresse' => $request->adresse,
-            'postleitzahl' => $request->postleitzahl,
-            'stadt' => $request->stadt,
+            'adresse' => $domenic8,
+            'postleitzahl' => $domenic9,
+            'stadt' => $domenic10,
             'rechnungsnummer' => $rechnungsnummer,
-            'land' => $request->land,
-            'created_at_two' => $request->created_at_two,
-            'widmung' => $request->widmung,
-            'gutschein_id' => $request->gutschein_id,
+            'land' => $domenic11,
+            'created_at_two' => $domenic12,
+            'widmung' => $domenic5,
+            'gutschein_id' => $domenic7,
             'amount' => $amount,
             'payment_method' => 'paypal',
             'status' => 'success',
             'currency' => $currency,
             'local_transaction_id' => $transaction_id,
+            'user_id' => $domenic13,
 
             'contributor_name_display' => session('cart.contributor_name_display'),
         ];
@@ -834,38 +817,18 @@ class CampaignsController extends Controller
      */
     public function paymentBankTransferReceive(Request $request)
     {
-        $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
-        $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
-        $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname']);
-        $domenic5 = Gutschein::orderBy('created_at', 'desc')->first(['ccv']);
-        $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email']);
-        $domenic7 = Gutschein::orderBy('created_at', 'desc')->first(['gutschein_id']);
-        $domenic8= Gutschein::orderBy('created_at', 'desc')->first(['adresse']);
-        $domenic9 = Gutschein::orderBy('created_at', 'desc')->first(['postleitzahl']);
-        $domenic10 = Gutschein::orderBy('created_at', 'desc')->first(['stadt']);
-        $domenic11 = Gutschein::orderBy('created_at', 'desc')->first(['land']);
-        $domenic12 = Gutschein::orderBy('created_at', 'desc')->first(['created_at']);
-
-
-
-        $rules = [
-            'bank_swift_code' => 'required',
-            'branch_name' => 'required',
-            'branch_address' => 'required',
-            'account_name' => 'required',
-            'versandart' => 'required',
-            'gutschein' => 'required',
-            'gutschein_id' => 'required',
-            'adresse' => 'required',
-            'postleitzahl' => 'required',
-            'stadt' => 'required',
-            'land' => 'required',
-            'name' => 'required',
-            'widmung' => 'required',
-            'email' => 'required',
-            'created_at' => 'created_at',
-        ];
-        $this->validate($request, $rules);
+        $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart'])->versandart;
+        $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount'])->amount;
+        $domenic4 = Gutschein::orderBy('created_at', 'desc')->first(['nachname'])->nachname;
+        $domenic5 = Gutschein::orderBy('created_at', 'desc')->first(['ccv'])->ccv;
+        $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email'])->email;
+        $domenic7 = Gutschein::orderBy('created_at', 'desc')->first(['gutschein_id'])->gutschein_id;
+        $domenic8= Gutschein::orderBy('created_at', 'desc')->first(['adresse'])->adresse;
+        $domenic9 = Gutschein::orderBy('created_at', 'desc')->first(['postleitzahl'])->postleitzahl;
+        $domenic10 = Gutschein::orderBy('created_at', 'desc')->first(['stadt'])->stadt;
+        $domenic11 = Gutschein::orderBy('created_at', 'desc')->first(['land'])->land;
+        $domenic12 = Gutschein::orderBy('created_at', 'desc')->first(['created_at'])->created_at;
+        $domenic13 = Gutschein::orderBy('created_at', 'desc')->first(['user_id'])->user_id;
 
         //get Cart Item
         if (!session('cart')) {
@@ -905,18 +868,18 @@ class CampaignsController extends Controller
             'currency' => $currency,
             'local_transaction_id' => $transaction_id,
             'email' => $request->email,
-            'created_at_two' => $request->created_at_two,
+            'created_at_two' => $domenic12,
 
-
-            'versandart' => $request->versandart,
-            'gutschein' => $request->gutschein,
-            'gutschein_id' => $request->gutschein_id,
-            'widmung' => $request->widmung,
-            'adresse' => $request->adresse,
-            'postleitzahl' => $request->postleitzahl,
-            'name' => $request->name,
-            'stadt' => $request->stadt,
-            'land' => $request->land,
+            'user_id' => $domenic13,
+            'versandart' => $domenic2,
+            'gutschein' => $domenic3,
+            'gutschein_id' => $domenic7,
+            'widmung' => $domenic5,
+            'adresse' => $domenic8,
+            'postleitzahl' => $domenic9,
+            'name' => $domenic4,
+            'stadt' => $domenic10,
+            'land' => $domenic11,
             'rechnungsnummer' => $rechnungsnummer,
 
 
@@ -948,9 +911,6 @@ class CampaignsController extends Controller
             $message->attachData($pdf2->output(), "rechnung.pdf");
         });
         $request->session()->forget('cart');
-        return view('admin.checkout_empty', compact('title', 'user',
-            'domenic2', $domenic2, $domenic3, 'domenic3',
-            'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7, 'domenic7',
-            $domenic8, 'domenic8',$domenic9, 'domenic9',$domenic10, 'domenic10',$domenic11, 'domenic11',$domenic12, 'domenic12'));
+        return view('admin.checkout_empty', compact('title', 'user'));
     }
 }

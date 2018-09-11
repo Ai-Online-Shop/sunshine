@@ -19,36 +19,8 @@
                                             <h2 class="light margin-top-2"><strong>PayPal</strong></h2>
                                             {{ Form::open(['route' => 'payment_paypal_receive']) }}
                                             <input type="hidden" name="cmd" value="_xclick"/>
-                                            <input type="text" class=" text-center hidden " id="name" value="{{ $domenic4->nachname }}"
-                                                   name="name">
-                                            <input type="text" class=" text-center hidden " id="widmung"
-                                                   value="{{ $domenic5->ccv }}" name="widmung">
-                                            <input type="text" class=" text-center hidden" id="gutschein"
-                                                   value="{{ $domenic3->amount }}"
-                                                   name="gutschein">
-                                            <input type="text" class=" text-center hidden " id="gutschein_id"
-                                                   value="{{ $domenic7->gutschein_id }}" name="gutschein_id">
-                                            <input type="text" class=" text-center hidden" id="versandart"
-                                                   value="{{ $domenic2->versandart }}"
-                                                   name="versandart">
-                                            <input type="text" class="text-center hidden" id="email" value="{{ $domenic6->email }}"
-                                                   name="email">
-                                            <input type="text" class=" text-center hidden" id="adresse"
-                                                   value="{{ $domenic8->adresse }}"
-                                                   name="adresse">
-                                            <input type="text" class=" text-center hidden" id="postleitzahl"
-                                                   value="{{ $domenic9->postleitzahl }}"
-                                                   name="postleitzahl">
-                                            <input type="text" class=" text-center hidden" id="stadt"
-                                                   value="{{ $domenic10->stadt }}"
-                                                   name="stadt">
-                                            <input type="text" class=" text-center hidden" id="land"
-                                                   value="{{ $domenic11->land }}"
-                                                   name="land">
-                                            <input type="text" class=" text-center hidden" id="created_at_two"
-                                                   value="{{ $domenic12->created_at }}"
-                                                   name="created_at_two">
-
+                                            <input type="email" id="email" value="{{ $domenic6 }}"
+                                                   name="email" style="display: none !important;">
                                             <input type="hidden" name="no_note" value="1"/>
                                             <input type="hidden" name="lc" value="UK"/>
                                             <input type="hidden" name="currency_code"
@@ -117,36 +89,8 @@
                                        value="123" name="account_name" style="display: none !important;">
                                 <input type="text" id="iban" value="123"
                                        name="iban" style="display: none !important;">
-                                <input type="text" class=" text-center hidden " id="name" value="{{ $domenic4->nachname }}"
-                                       name="name">
-                                <input type="text" class=" text-center hidden " id="gutschein_id"
-                                       value="{{ $domenic7->gutschein_id }}" name="gutschein_id">
-                                <input type="text" class=" text-center hidden " id="widmung"
-                                       value="{{ $domenic5->ccv }}" name="widmung">
-                                <input type="text" class=" text-center hidden" id="gutschein"
-                                       value="{{ $domenic3->amount }}"
-                                       name="gutschein">
-                                <input type="text" class=" text-center hidden" id="versandart"
-                                       value="{{ $domenic2->versandart }}"
-                                       name="versandart">
-                                <input type="text" class="form-control text-center hidden" id="email" value="{{ $domenic6->email }}"
-                                       name="email">
-
-                                <input type="text" class=" text-center hidden" id="adresse"
-                                       value="{{ $domenic8->adresse }}"
-                                       name="adresse">
-                                <input type="text" class=" text-center hidden" id="postleitzahl"
-                                       value="{{ $domenic9->postleitzahl }}"
-                                       name="postleitzahl">
-                                <input type="text" class=" text-center hidden" id="stadt"
-                                       value="{{ $domenic10->stadt }}"
-                                       name="stadt">
-                                <input type="text" class=" text-center hidden" id="land"
-                                       value="{{ $domenic11->land }}"
-                                       name="land">
-                                <input type="text" class=" text-center hidden" id="created_at_two"
-                                       value="{{ $domenic12->created_at }}"
-                                       name="created_at_two">
+                                <input type="email" id="email" value="{{ $domenic6 }}"
+                                       name="email" style="display: none !important;">
                                 <table class="table text-black">
                                     <tr>
                                         <th>BIC</th>

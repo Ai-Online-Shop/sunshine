@@ -21,6 +21,7 @@
                     <div class="wrap">
                         <ul class="flex fix-10-12 ae-1 light micro text-white">
                             <li class="col-4-12"><p><a href="{{route('sha')}}">Sunshine Wellness Schwäbisch Hall</a></p></li>
+                            <li class="col-4-12"><p><a href="{{route('gelbinger')}}">Sunshine Wellness Gelbinger-Gasse</a></p></li>
                             <li class="col-4-12"><p><a href="{{route('impressum')}}">Impressum</a></p></li>
                             <li class="col-4-12"><p><a href="{{route('agb')}}">Allgemeine Geschäftsbedingungen</a></p></li>
                         </ul>
