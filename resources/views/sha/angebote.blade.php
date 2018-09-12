@@ -201,8 +201,6 @@
                                             <h5 class="big">Laden Sie sich unsere aktuellen Preise und Angebote für das Schenkenseebad einfach hier herunter.</h5>
                                             <a class="text-blue button green small rounded margin-top-3" href="/preise-sha">Aktuelle Preisliste</a> <br />
                                             <a class="text-blue button green small rounded margin-top-1" href="/downloadImmo4">Aktuelle Angebote</a> <br />
-
-
                                         </div>
                                     </li>
 
