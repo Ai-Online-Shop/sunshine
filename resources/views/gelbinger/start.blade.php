@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="wrap">
                     <div class="article">
-                        <h1 class="ae-1 text-white">Herzlich Willkommen im Sunshine Wellness!</h1>
+                        <h1 class="ae-1 text-white">Herzlich Willkommen im Sunshine Wellness Gelbinger Gasse!</h1>
                         <div class="ae-2 text-white"><p>Baden, Saunieren und Wellness an einem Ort! Der perfekte Platz
                                 um den Alltag hinter sich zu lassen.</p></div>
                     </div>
