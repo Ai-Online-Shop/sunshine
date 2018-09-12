@@ -21,16 +21,13 @@
                             <img class="img-91 wide shadow" src="{{ asset('assets/img/sun-1.jpg') }}" alt="Video Thumbnail"/>
                         </li>
                         <li class="col-6-12 col-tablet-1-2 col-phone-1-1 ae-4">
-                            <p class="center text-white semiBold opacity-10 margin-bottom-2">
-                                Vielen Dank, dass Sie sich für unseren Service entschieden haben.
-                                Bestimmen Sie in welchem Studio der Gustchein eingelöst werden soll.</p>
                         @foreach($categories as $cat)
                                 <div class="pad2 shadow rounded margin-left-3 margin-right-3 margin-bottom-2 center">
                                     <h3 class="big">{{ $cat->category_name }}</h3>
                                     <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
                                     <p class="micro">{{ $cat->image }}</p>
                                     <a href="{{route('single_category', [$cat->id, $cat->category_slug])}}"
-                                       class="ac-ln-button">Studio auswählen</a>
+                                       class="ac-ln-button">Jetzt loslegen</a>
                                 </div>
                         @endforeach
                         </li>

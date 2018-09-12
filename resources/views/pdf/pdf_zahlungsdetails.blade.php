@@ -23,6 +23,7 @@
     }
     .bildqr {
         max-width: 3.5cm;
+        float: left;
         text-align: center;
         margin: 0 !important;
         padding: 0 !important;
@@ -44,16 +45,16 @@
     }
     .margin-1 {
         position: absolute !important;
-        bottom: 125px !important;
+        bottom: 35px !important;
     }
     .margin-2 {
-        padding-top: 35px !important;
+        padding-top: 15px !important;
     }
     .margin-3 {
-        padding-top: 25px !important;
+        padding-top: 15px !important;
     }
 </style>
-<img class="bild" src="http://sunshinewellness.de/assets/img/gutschein-pdf-1.jpg">
+<img class="bild" src="http://sunshinewellness.de/assets/img/gutschein-pdf.jpg">
 <img class="bildqr" src="http://sunshinewellness.de/assets/img/qr_code.png">
 <p class="margin">
     <h1 class="center margin-2 orange"><strong>{{$gutschein}} Euro</strong></h1>
