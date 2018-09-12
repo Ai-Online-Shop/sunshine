@@ -123,6 +123,29 @@ class DashboardController extends Controller
 
         return response()->download($file, 'preise.pdf', $headers);
     }
+    public function downloadcr()
+    {
+        //PDF file is stored under project/public/download/info.pdf
+        $file= public_path(). "/assets/PDF/preise-cr.pdf";
+
+        $headers = [
+            'Content-Type' => 'application/pdf',
+        ];
+
+        return response()->download($file, 'preise.pdf', $headers);
+    }
+    public function downloadgelbinger()
+    {
+        //PDF file is stored under project/public/download/info.pdf
+        $file= public_path(). "/assets/PDF/preise-gelbinger.pdf";
+
+        $headers = [
+            'Content-Type' => 'application/pdf',
+        ];
+
+        return response()->download($file, 'preise.pdf', $headers);
+    }
+
 
     public function support(){
 

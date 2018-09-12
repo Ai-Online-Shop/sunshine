@@ -11,7 +11,7 @@
                 <div class="wrap">
 
                     <div class="fix-12-12">
-                        <h1 class="ae-2 fix-6-12 bold margin-bottom-5 text-white fromLeft">Das Sunshine-Wellness Angebot für unsere Gäste:</h1>
+                        <h1 class="ae-2 fix-6-12 bold margin-bottom-5 text-white fromLeft">Das Sunshine-Wellness Angebot für unsere Gäste in der Gelbinger-Gasse:</h1>
 
                         <ul class="grid">
                             <li class="col-6-12 left cell-33">
@@ -29,7 +29,7 @@
                             <li class="col-6-12 left ae-2 fromRight">
                                 <ul class="slider" data-slider-id="31">
                                     <li class="selected">
-                                        <div class="pad-blur shadow center">
+                                        <div class="pad shadow center">
 
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -49,7 +49,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pad-blur shadow center">
+                                        <div class="pad shadow center">
 
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -66,7 +66,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pad-blur shadow center">
+                                        <div class="pad shadow center">
 
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -88,7 +88,7 @@
                                     </li>
 
                                     <li>
-                                        <div class="pad-blur shadow center">
+                                        <div class="pad shadow center">
 
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -105,7 +105,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pad-blur shadow center">
+                                        <div class="pad shadow center">
 
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -139,7 +139,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pad-blur shadow center">
+                                        <div class="pad shadow center">
 
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -167,7 +167,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pad-blur shadow center">
+                                        <div class="pad shadow center">
 
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -186,7 +186,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="pad-blur shadow center">
+                                        <div class="pad shadow center">
 
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -198,8 +198,8 @@
                                                 </p>
                                             @endif
                                             <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
-                                            <h5 class="big">Laden Sie sich unsere aktuellen Preise und Angebote einfach hier herunter.</h5>
-                                            <a class="text-blue button green small rounded margin-top-3" href="/downloadsha">Aktuelle Preisliste</a> <br />
+                                            <h5 class="big">Laden Sie sich unsere aktuellen Preise und Angebote für die Gelbinger-Gasse einfach hier herunter.</h5>
+                                            <a class="text-blue button green small rounded margin-top-3" href="/preise-gelbinger">Aktuelle Preisliste</a> <br />
                                             <a class="text-blue button green small rounded margin-top-1" href="/downloadImmo4">Aktuelle Angebote</a> <br />
 
 

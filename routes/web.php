@@ -62,8 +62,12 @@ Route::get('verified', ['as' => 'verified', 'uses' => 'DashboardController@verif
 Route::get('/downloadImmo', 'DashboardController@getDownload');
 Route::get('/downloadImmo2', 'DashboardController@getDownload2');
 Route::get('/downloadImmo3', 'DashboardController@getDownload3');
-Route::get('/downloadsha', 'DashboardController@downloadsha');
+
+Route::get('/preise-sha', 'DashboardController@downloadsha');
 Route::get('/downloadImmo4', 'DashboardController@getDownload4');
+
+Route::get('/preise-gelbinger', 'DashboardController@downloadgelbinger');
+Route::get('/preise-crailsheim', 'DashboardController@downloadcr');
 
 
 Route::get('/gutschein', ['as' => 'gutschein', 'uses' => 'CategoriesController@browseCategories']);

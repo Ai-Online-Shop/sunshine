@@ -133,6 +133,6 @@
 <p class="center">IBAN: DE60622500300001872110</p>
 <p class="center">Bank: Sparkasse</p>
 <p class="center">BIC: SOLADES1SHA</p>
-<p class="center">Verwendungszweck: Sun-Gutschein/2017</p>
+<p class="center">Verwendungszweck: {{$gutschein_id}}</p>
 </body>
 </html>
