@@ -121,8 +121,9 @@
                                         <td>{{ $domenic7->gutschein_id }}</td>
                                     </tr>
                                 </table>
-                                <button type="submit" class="button blue">Jetzt kaufen
+                                <button type="submit" class="button blue" onclick="myFunction()">Jetzt kaufen
                                 </button>
+                                <p id="demo" class="small bold text-red"></p>
                             </div>
                         </li>
                     </ul>
@@ -130,6 +131,7 @@
             </div>
         </div>
     </section>
+    <div id="loader"></div>
     <script>
         $('#bankTransferBtn').click(function () {
             $('.bankPaymetWrap').slideToggle();
@@ -167,5 +169,8 @@
                 $(this).blur().dequeue();
             });
         }, 500);
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Bitte nur 1 mal klicken, ihr Gutschein wird gerade erstellt...";
+        }
     </script>
 @endsection

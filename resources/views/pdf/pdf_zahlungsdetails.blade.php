@@ -56,8 +56,7 @@
 <p class="margin">
     <img class="bildqr margin-2" src="http://sunshinewellness.de/assets/img/qr_code.png">
     <h1 class="center margin-2 orange"><strong>{{$gutschein}} Euro</strong></h1>
-    <p class="center orange">Ausstellungsdatum: {{ $created_at_two }}</p>
-    <p class="center orange margin-3">Gutschein Code: {{$gutschein_id}}</p>
+    <p class="center orange">Ausstellungsdatum: {{ $created_at_two }} <br/>Gutschein Code: {{$gutschein_id}}</p>
     <p class="center orange">{{$widmung}}</p>
 </p>
 <img class="bild-2" src="http://sunshinewellness.de/assets/img/gutschein-pdf-2.jpg">
