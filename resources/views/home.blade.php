@@ -49,7 +49,7 @@
 
                             <div class="fix-12-12 article center">
                                 <div class="fix-11-12 text-white">
-                                    <h1><strong>Willkommen im Sunshine Wellness!</strong>
+                                    <h1><strong>Willkommen im Sunshine Wellness Crailsheim!</strong>
                                     </h1>
                                     <div class=" margin-bottom-2 hideForMobile ">
                                         <p class="hero">Für uns stehen Sie im Mittelpunkt!
@@ -64,27 +64,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="background" style="background-image:url({{ asset('assets/img/slider-1.jpg') }})"></div></li>
+                <div class="background" style="background-image:url({{ asset('assets/img/slider-1.jpg') }})"></div>
             </li>
             <li>
                 <div class="content">
                     <div class="container">
-                        <div class="wrap">
+                        <div class="wrap article">
 
-                            <div class="fix-12-12 article ">
+                            <div class="fix-12-12 center">
                                 <div class="fix-11-12 text-white">
-                                    <h1><strong>Jetzt Neu im Schenkenseebad</strong>
+                                    <h1><strong>Jetzt Neu in der Gelbinger-Gasse </strong>
                                     </h1>
-                                    <div class=" margin-bottom-2 hideForMobile ">
+                                    <div class=" margin-bottom-5 hideForMobile ">
                                         <p class="hero">Sie können jetzt online Termine reservieren und buchen</p>
                                     </div>
-                                    <a class=" button round white" href="{{route('sha/termin')}}">Termin</a>
+                                    <a class=" button round white" href="{{route('gelbinger/termin')}}">Termin</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="background" style="background-image:url({{ asset('assets/img/slider-22.jpg') }})"></div></li>
+                <div class="background" style="background-image:url({{ asset('assets/img/gelbinger-slider-5.jpg') }})"></div>
             </li>
             <li>
                 <div class="content">

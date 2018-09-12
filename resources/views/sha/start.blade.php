@@ -41,7 +41,7 @@
                                         <img src="{{ asset('assets/img/slider-22.jpg') }}"
                                              class="ae-4 margin-bottom-2"
                                              alt="Sunshine Wellness Schenkenseestraße 67, 74523 Schwäbisch Hall"/>
-                                        <p class="hero crop bold ae-5">Schwäbisch-Hall</p>
+                                        <p class="hero crop bold ae-5">Schwäbisch Hall</p>
                                         <div class="ae-6 "><p class="small cropTop equalElement">
                                                 „Im Schenkenseebad“</p></div>
                                         <a href="{{ route('sha') }}" class="button orange uppercase wide cropBottom ae-7">Zur
@@ -66,7 +66,7 @@
                                     <div class="pad shadow ae-4">
                                         <img src="{{ asset('assets/img/gelbinger-slider-5.jpg') }}" class="ae-5 margin-bottom-2"
                                              alt="Sunshine Wellness Gelbinger Gasse 21, 74523 Schwäbisch Hall"/>
-                                        <p class="hero crop bold ae-6">Gelbinger Gasse</p>
+                                        <p class="hero crop bold ae-6">Schwäbisch Hall</p>
                                         <div class="ae-7"><p class="small cropTop equalElement">„Gelbinger Gasse 21"</p></div>
                                         <a href="{{ route('gelbinger') }}" class="button uppercase orange cropBottom wide ae-8">Zur
                                             Website</a>

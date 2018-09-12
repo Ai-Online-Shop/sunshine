@@ -7,14 +7,13 @@
         font-family: Helvetica;
         font-weight: normal;
         font-style: normal;
-
     }
 
     body {
         font-family: Helvetica;
     }
     .orange{
-        color: #FF9800;
+        color: #333232;
     }
     .bild {
         max-width: 19.4cm;
@@ -22,9 +21,22 @@
         margin: 0 !important;
         padding: 0 !important;
     }
+    .bildqr {
+        max-width: 3.5cm;
+        text-align: center;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .bild-2 {
+        bottom: 1cm;
+        max-width: 19.4cm;
+        text-align: center;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 
     .center {
-        text-align: center;
+        text-align: right;
     }
 
     .margin {
@@ -41,13 +53,15 @@
         padding-top: 25px !important;
     }
 </style>
-<img class="bild" src="http://sunshinewellness.de/assets/img/gutschein-top-{{ $user_id }}.jpg">
+<img class="bild" src="http://sunshinewellness.de/assets/img/gutschein-pdf-1.jpg">
+<img class="bildqr" src="http://sunshinewellness.de/assets/img/qr_code.png">
 <p class="margin">
-    <h1 class="center margin-2 orange"><strong>Gutscheinwert: {{$gutschein}} Euro</strong></h1>
+    <h1 class="center margin-2 orange"><strong>{{$gutschein}} Euro</strong></h1>
     <p class="center orange">Ausstellungsdatum: {{ $created_at_two }}</p>
     <p class="center orange">_____</p>
     <p class="center orange margin-3">Ihre Gutschein Code lautet: <br/>{{$gutschein_id}}</p>
     <p class="center orange">{{$widmung}}</p>
 </p>
+<img class="bild-2" src="http://sunshinewellness.de/assets/img/gutschein-pdf-2.jpg">
 </body>
 </html>

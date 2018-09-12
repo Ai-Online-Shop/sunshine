@@ -240,11 +240,12 @@
         <div class="container">
             <div class="wrap">
                 <ul class="flex fix-10-12 ae-1 light micro text-white">
-                    <li class="col-4-12"><p><a href="{{route('home')}}">Sunshine Wellness Crailsheim</a></p></li>
-                    <li class="col-4-12"><p><a href="{{route('sha')}}">Sunshine Wellness Schwäbisch Hall</a></p></li>
-                    <li class="col-4-12"><p><a href="{{route('impressum')}}">Impressum</a></p></li>
-                    <li class="col-4-12"><p><a href="{{route('agb')}}">Allgemeine Geschäftsbedingungen</a></p></li>
+                    <li class="col-3-12"><p><a href="{{route('home')}}">Sunshine Wellness Crailsheim</a></p></li>
+                    <li class="col-3-12"><p><a href="{{route('sha')}}">Sunshine Wellness Schenkenseebad</a></p></li>
+                    <li class="col-3-12"><p><a href="{{route('impressum')}}">Impressum</a></p></li>
+                    <li class="col-3-12"><p><a href="{{route('agb')}}">Allgemeine Geschäftsbedingungen</a></p></li>
                 </ul>
+
                 <div class="spread-bar-line2 ae-1 margin-bottom-4"></div>
                 <ul class="flex margin-left-2 margin-right-2 text-white">
                     <li class="col-3-12 center ae-2">
