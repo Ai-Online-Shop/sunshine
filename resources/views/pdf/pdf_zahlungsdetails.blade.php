@@ -25,8 +25,6 @@
         max-width: 3.5cm;
         float: left;
         text-align: center;
-        margin: 0 !important;
-        padding: 0 !important;
     }
     .bild-2 {
         bottom: 1cm;
@@ -55,12 +53,12 @@
     }
 </style>
 <img class="bild" src="http://sunshinewellness.de/assets/img/gutschein-pdf.jpg">
-<img class="bildqr" src="http://sunshinewellness.de/assets/img/qr_code.png">
 <p class="margin">
+    <img class="bildqr" src="http://sunshinewellness.de/assets/img/qr_code.png">
     <h1 class="center margin-2 orange"><strong>{{$gutschein}} Euro</strong></h1>
     <p class="center orange">Ausstellungsdatum: {{ $created_at_two }}</p>
     <p class="center orange">_____</p>
-    <p class="center orange margin-3">Ihre Gutschein Code lautet: <br/>{{$gutschein_id}}</p>
+    <p class="center orange margin-3">Gutschein Code: {{$gutschein_id}}</p>
     <p class="center orange">{{$widmung}}</p>
 </p>
 <img class="bild-2" src="http://sunshinewellness.de/assets/img/gutschein-pdf-2.jpg">
