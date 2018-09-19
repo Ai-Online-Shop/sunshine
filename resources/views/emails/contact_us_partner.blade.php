@@ -9,7 +9,7 @@ Hier sind alle wichtigen Daten:
 ## Postleitzahl
 {{$unternehmen}}
 
-## Partnerschaft für {{$name}}
+## Für {{$name}}
 {{$anfrage}}
 
 
