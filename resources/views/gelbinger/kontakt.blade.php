@@ -71,13 +71,13 @@
                                         <div class="col-lg-12 form-group ae-5">
                                             <label for="anfrage" class="control-label">Anfrage</label>
                                             <select class="form-control select2" id="anfrage" name="anfrage" required>
-                                                <option value="Ich möchte mehr wissen über">Anfrage</option>
-                                                <option value="Termin vereinbaren" >Termin vereinbaren</option>
-                                                <option value="Gutschein kaufen" >Gutschein kaufen</option>
-                                                <option value="Informationen zu Wellness-Paketen" >Informationen zu Wellness-Paketen</option>
-                                                <option value="Bewerbung als Mitarbeiter" >Bewerbung als Mitarbeiter</option>
-                                                <option value="Fragen zu aktuellen Angeboten" >Fragen zu aktuellen Angeboten</option>
-                                                <option value="Sonstige Anfrage" >Sonstige Anfrage</option>
+                                                <option value="Ich möchte mehr wissen über Gelbinger Gasse">Anfrage</option>
+                                                <option value="Termin vereinbaren Gelbinger Gasse" >Termin vereinbaren</option>
+                                                <option value="Gutschein kaufen Gelbinger Gasse" >Gutschein kaufen</option>
+                                                <option value="Informationen zu Wellness-Paketen Gelbinger Gasse" >Informationen zu Wellness-Paketen</option>
+                                                <option value="Bewerbung als Mitarbeiter Gelbinger Gasse" >Bewerbung als Mitarbeiter</option>
+                                                <option value="Fragen zu aktuellen Angeboten Gelbinger Gasse" >Fragen zu aktuellen Angeboten</option>
+                                                <option value="Sonstige Anfrage Gelbinger Gasse" >Sonstige Anfrage</option>
                                             </select>
                                         </div>
                                         <button type="submit" class="ac-ln-button ae-4 button">Abschicken</button>

@@ -70,13 +70,13 @@
                                         <div class="col-lg-12 form-group ae-5">
                                             <label for="anfrage" class="control-label">Anfrage</label>
                                             <select class="form-control select2" id="anfrage" name="anfrage" required>
-                                                <option value="Ich möchte mehr wissen über">Anfrage</option>
-                                                <option value="Termin vereinbaren" >Termin vereinbaren</option>
-                                                <option value="Gutschein kaufen" >Gutschein kaufen</option>
-                                                <option value="Informationen zu Wellness-Paketen" >Informationen zu Wellness-Paketen</option>
-                                                <option value="Bewerbung als Mitarbeiter" >Bewerbung als Mitarbeiter</option>
-                                                <option value="Fragen zu aktuellen Angeboten" >Fragen zu aktuellen Angeboten</option>
-                                                <option value="Sonstige Anfrage" >Sonstige Anfrage</option>
+                                                <option value="Ich möchte mehr wissen über Schwäbisch Hall">Anfrage</option>
+                                                <option value="Termin vereinbaren Schwäbisch Hall" >Termin vereinbaren</option>
+                                                <option value="Gutschein kaufen Schwäbisch Hall" >Gutschein kaufen</option>
+                                                <option value="Informationen zu Wellness-Paketen Schwäbisch Hall" >Informationen zu Wellness-Paketen</option>
+                                                <option value="Bewerbung als Mitarbeiter Schwäbisch Hall" >Bewerbung als Mitarbeiter</option>
+                                                <option value="Fragen zu aktuellen Angeboten Schwäbisch Hall" >Fragen zu aktuellen Angeboten</option>
+                                                <option value="Sonstige Anfrage Schwäbisch Hall" >Sonstige Anfrage</option>
                                             </select>
                                         </div>
                                         <button type="submit" class="ac-ln-button ae-4 button">Abschicken</button>

@@ -14,19 +14,21 @@
                         <h1 class="ae-2 fix-6-12 bold margin-bottom-5 text-white fromLeft">Das Sunshine-Wellness Angebot für unsere Gäste in der Gelbinger-Gasse:</h1>
 
                         <ul class="grid">
-                            <li class="col-6-12 left cell-33">
+                            <li class="col-4-12 left cell-33">
                                 <ul class="tabs controller uppercase ae-3 fromCenter" data-slider-id="31">
-                                    <li class="selected">Sunshine-Wellness-Paket</li>
-                                    <li>Sunshine-Luxus-Tag</li>
-                                    <li>Orientalischer Zauber</li>
-                                    <li>Vital Tag</li>
+                                    <li class="selected">Sunshine Luxus Tag</li>
+                                    <li>Intensiv Entspannung</li>
+                                    <li>Wellness Gesichtsbehandlung</li>
+                                    <li>Sunshine Wellness Paket</li>
+                                    <li>Karibik Flair Paket</li>
+                                    <li>Ayurvedic Ceramony Paket</li>
                                     <li>Wellness- und Vital-Massagen (I)</li>
                                     <li>Wellness- und Vital-Massagen (II)</li>
                                     <li>Wellness- und Vital-Massagen (III)</li>
                                     <li>Aktuelle Preisliste (PDF)</li>
                                 </ul>
                             </li>
-                            <li class="col-6-12 left ae-2 fromRight">
+                            <li class="col-8-12 left ae-2 fromRight">
                                 <ul class="slider" data-slider-id="31">
                                     <li class="selected">
                                         <div class="pad shadow center">
@@ -34,18 +36,17 @@
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
                                             </svg>
-                                            <h3 class="big">Unser Sunshine-Wellness-Paket dauert ca. 2,5 Stunden.</h3>
+                                            <h3 class="big">Unser Sunshine Luxus Tag dauert 5 Stunden</h3>
                                             <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
-                                            <h5 class="big">Willkommensgetränk | Tageskarte Sauna Park und Schenkenseebad | Ganzkörperpeeling | Ganzkörperölmassage | Kopfmassage</h5>
-                                            <p class="micro margin-top-2">Wir heißen Sie mit einem leckeren, frisch zubereiteten Früchtecocktail willkommen.
-                                                Danach können Sie sich im Schenkensee Sauna Park entspannen.
-                                                Anschließend erfährt Ihr Körper eine angenehme Peelingreinigung mit hochwertigen Produkten.</p>
-                                            <p class="micro margin-top-2">
-                                                Ihre Haut wird danach nicht nur wohlriechend duften, sondern sich samtweich und strahlend anfühlen
-                                                Hierauf folgt eine Ganzkörper- Öl- und Kopfmassage. Bei dieser Anwendung wird Ihr Körper mit sanften,
-                                                gleichmäßig langsamen Bewegungen massiert, was zur Folge hat, dass nicht nur Ihr Körper, sondern auch Ihre Seele tief
-                                                entspannt und Sie sich anschließend wie neu geboren fühlen.
-                                            </p>
+                                            <h5 class="big">Das Paket beinhaltet:<br>
+
+                                                • Wellness Getr&auml;nk <br>
+                                                • Day Spa <br>
+                                                • Ganzk&ouml;rper Peeling <br>
+                                                • Ganzk&ouml;rper &Ouml;l Massage <br>
+                                                • Wellness Gesichtsbehandlung<br/>
+                                                • Hand Maske & Massage<br/>
+                                                • Fuß Maske & Massage</h5>
                                         </div>
                                     </li>
                                     <li>
@@ -54,15 +55,48 @@
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
                                             </svg>
-                                            <h3 class="big">Unser Sunshine-Luxus Tag.</h3>
+                                            <h3 class="big">Unsere Intensiv Entspannung dauert 130 min.</h3>
                                             <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
-                                            <h5 class="big">Willkommensgetränk | Ganzkörperpeeling | Premium Wellness Salat | Tageskarte Sauna Park und Schenkenseebad | Ganzkörper Öl Massage und Gesichtsmassage | Hand und Fuß Maske und Massage</h5>
+                                            <h5 class="big">
+                                                Das Paket beinhaltet:<br/>
 
-                                            <p class="micro margin-top-2">
-                                                Wir heißen Sie mit einem leckeren, frisch zubereiteten Früchtecocktail willkommen.
-                                                Danach können Sie sich im Schenkensee Sauna Park entspannen. Anschließend reichen wir Ihnen unseren premium Wellness Salat, woraufhin Sie sich bei einer Ganzkörper Öl Massage entspannen können. Zu guter Letzt
-                                                werden auch Ihre Füße und Hände massiert und bekommen eine sinnliche Kosmetik Maske.
-                                            </p>
+                                                • Fuß Peeling Maske<br/>
+                                                • Ganzkörper Massage<br/>
+                                                • Wellness Gesichtsbehandlung<br/>
+                                                • Hand Peeling & Maske<br/>
+                                                • Hand & Fuß Massage
+                                            </h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pad shadow center">
+                                            <svg style="width:65px;height:65px">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+                                            </svg>
+                                            <h3 class="big">Unsere Wellness Gesichtsbehandlung dauert 160 min.</h3>
+
+                                            <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
+                                            <h5 class="big">Das Paket beinhaltet:<br/>
+
+                                                • Gesichtsreinigung<br/>
+                                                • Peeling Massage<br/>
+                                                • Maske & Kopf Massage Tagespflege</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pad shadow center">
+                                            <svg style="width:65px;height:65px">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+                                            </svg>
+                                            <h3 class="big">Das Sunshine Wellness Paket dauert 2.5 Stunden</h3>
+                                            <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
+                                            <h5 class="big">Das Paket beinhaltet:<br/>
+
+                                                • Willkommensgetr&auml;nk<br/>
+                                                • Sauna<br/>
+                                                • Ganzk&ouml;rperpeeling<br/>
+                                                • Ganzk&ouml;rper &Ouml;lmassage<br/>
+                                                • Kopf Massage</h5>
                                         </div>
                                     </li>
                                     <li>
@@ -71,37 +105,33 @@
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
                                             </svg>
-                                            <h3 class="big">Ihre 1001 Nacht endet nach ca. 3,5 Stunden.</h3>
-
+                                            <h3 class="big">Das Karibik Flair Paket dauert 3 Stunden</h3>
                                             <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
-                                            <h5 class="big">Willkommensgetränk | Tageskarte Sauna Park und Schenkenseebad | Ganzkörperpeeling | Schaummassage (Hammam) | Honig-Milch-Massage | Ein Glas Prosecco</h5>
-
-                                            <p class="micro margin-top-2">Ihr Einblick in die arabische Welt beginnt mit unserem orientalischen, kräfteweckenden Cocktail.
-                                                Während Ihre Haut in der Schenkenseebad Sauna Landschaft durchblutet wird, entspannt Ihre Seele bei Düften aus 1001 Nacht. Gerüche wie Zimt, Anis,
-                                                Ingwer und Koriander versetzen Sie an einen Ort, der von Palästen mit Zwiebeltürmchen, verschlungen Ornamenten und Mystiken und Geheimnissen geprägt ist.</p>
-                                            <p class="micro margin-top-2">
-                                                Nachdem Sie sich unter der Erlebnisdusche erfrischt haben, erwartet Sie ein Ganzkörperpeeling auf unserer temperierten Hammam-Marmorliege.
-                                                Durch die folgende sahnige Schaummassage wird Ihre Haut samtweich und fühlt sich durch die tausenden Schaumbläschen prickelnd an.
-                                                Danach entspannen Sie bei einer Honig-Milch-Ölmassage.
-                                            </p>
+                                            <h5 class="big">Das Paket beinhaltet:<br/>
+                                                • Willkommensgetränk<br/>
+                                                • Sauna & Verwöhn Bad<br/>
+                                                • Ganzkörper Peeling<br/>
+                                                • Ganzkörper Schokoladenmassage<br/>
+                                                • Gesichtsmaske</h5>
                                         </div>
                                     </li>
-
                                     <li>
                                         <div class="pad shadow center">
 
                                             <svg style="width:65px;height:65px">
                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
                                             </svg>
-                                            <h3 class="big">Vital Tag</h3>
+                                            <h3 class="big">Das Ayurvedic Ceramony Paket dauert 4 Stunden</h3>
                                             <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
-                                            <h5 class="big">Willkommensgetränk | Tageskarte Sauna Park und Schenkenseebad | Ganzkörperpeeling | Vital Salat | Traditionelle Thai Massage</h5>
+                                            <h5 class="big">Das Paket beinhaltet:<br/>
 
-                                            <p class="micro margin-top-2">Entspannen Sie bei einem Ganzkörperpeeling mit Jasmin-Reis-Kristallen und Mandelcreme.
-                                                Während Ihre Haut in der Schenkenseebad Sauna Landschaft durchblutet wird, entspannt Ihre Seele bei vitalisierenden Düften.</p>
-                                            <p class="micro margin-top-2">Genießen Sie unseren frisch zubereiteten Vital Salat und stärken Sie ihr Immunsystem. Anschließend
-                                                fühlen Sie sich wie neu geboren nach unserer traditionellen Thai Massage.
-                                            </p>
+                                                • Willkommensgetränk<br/>
+                                                • Sauna<br/>
+                                                • Cleopatrabad<br/>
+                                                • Ganzkörper Peeling<br/>
+                                                • Shirodhara Stirnguss<br/>
+                                                • Abhyanga Massage<br/>
+                                                • Padabhyanga Fußmassage</h5>
                                         </div>
                                     </li>
                                     <li>
