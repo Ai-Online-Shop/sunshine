@@ -73,12 +73,9 @@
 
                             <div class="fix-12-12 center">
                                 <div class="fix-11-12 text-white">
-                                    <h1><strong>Jetzt Neu in der Gelbinger-Gasse </strong>
+                                    <h1><strong>Sie können jetzt online Termine reservieren und buchen</strong>
                                     </h1>
-                                    <div class=" margin-bottom-5 hideForMobile ">
-                                        <p class="hero">Sie können jetzt online Termine reservieren und buchen</p>
-                                    </div>
-                                    <a class=" button round white" href="{{route('gelbinger/termin')}}">Termin</a>
+                                    <a class=" button round white" href="{{route('termin')}}">Termin</a>
                                 </div>
                             </div>
                         </div>
