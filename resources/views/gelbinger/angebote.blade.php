@@ -25,6 +25,7 @@
                                     <li>Wellness- und Vital-Massagen (I)</li>
                                     <li>Wellness- und Vital-Massagen (II)</li>
                                     <li>Wellness- und Vital-Massagen (III)</li>
+                                    <li>Neue Massagen</li>
                                     <li>Aktuelle Preisliste (PDF)</li>
                                 </ul>
                             </li>
@@ -212,6 +213,25 @@
                                             <h5 class="big">Abhyanga-Massage</h5>
                                             <p class="micro">
                                                 Durch eine Ganzkörper ayurvedische Ölmassage wird das gesamte Nervensystem beruhigt und Erschöpfungen und Stress können abgebaut werden.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pad shadow center">
+
+                                            <svg style="width:65px;height:65px">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+                                            </svg>
+                                            <h3 class="big">Neue Massagen</h3>
+                                            <div class="gradient-line-3 gradient-left gradient-width-120 margin-bottom-2 margin-top-1"></div>
+                                            <p class="micro">
+                                                - Manuelle  Lymphdrainage<br/>
+                                                - Rücken  Massage mit anschließender  Fangopackung<br/>
+                                                - Moormassage<br/>
+                                                - Moorpackung<br/>
+                                                - Kokos/Vanille  Peeling  mit anschließender  Kokos/Vanille  Öl Aroma Ganzkörper  Massage<br/>
+                                                - Moorbad  mit anschl.Entspannungsmassage<br/>
+                                                - Heilerde Packung  bei Neurodermitis oder Akne
                                             </p>
                                         </div>
                                     </li>
