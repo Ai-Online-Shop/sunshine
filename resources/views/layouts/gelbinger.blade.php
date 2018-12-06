@@ -273,6 +273,19 @@
         </div>
     </div>
 </section>
+<div class="dialogContainer bottom">
+    <div class="dialog" data-dialog-id="dialog" data-set-cookie="30">
+        <div class="close" data-dialog-action="close"></div>
+        <div class="dialogContent">
+            <div class="text center">
+                <p class="montserrat small bold">Neueröffnung Gelbinger-Gasse am 08.12.18</p>
+                <p class="micro montserrat">Kommen Sie Vorort zur Neueröffnung und erhalten Sie 10% auf alle Gutscheine und Anwendungen!</p>
+                <a href="{{ route('gelbinger/kontakt') }}" class="button wide orange crop"
+                   data-dialog-action="close">Gelbinger Gasse Anfahrt</a>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="{{ asset('assets/js/plugins.js') }}" type="text/javascript" name="plugins"></script>
