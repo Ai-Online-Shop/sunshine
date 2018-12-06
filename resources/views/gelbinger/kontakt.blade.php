@@ -32,6 +32,7 @@
                                     <p class="margin-top-3 big ae-7">Tel.: 079197822547</p>
                                     <p class="big ae-7">Tel.: 01608379969</p>
                                     <p class="big ae-7">E-Mail: amikahaag@gmail.com</p>
+                                    <a class="button orange cropBottom" href="https://www.google.de/maps/place/Sunshinewellness/@49.1147119,9.7339032,17z/data=!4m13!1m7!3m6!1s0x4798500ade570e8b:0xe526d204fde2ab78!2sGelbinger+G.+21,+74523+Schwäbisch+Hall,+Deutschland!3b1!8m2!3d49.1147119!4d9.7360919!3m4!1s0x479851ae62d20869:0x9b0a8d391540613f!8m2!3d49.11472!4d9.73613">Anfahrt Planen</a>
                                 </div>
                             </li>
                             <li class="col-6-12 col-tablet-1-2 col-phablet-1-1 ae-1">
