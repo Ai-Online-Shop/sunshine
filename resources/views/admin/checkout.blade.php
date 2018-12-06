@@ -35,7 +35,6 @@
 
                                 <p class="bold">Durch Gutschein kaufen stimmen Sie unseren
                                     <a class="text-blue" target="_blank" href="{{route('agb')}}"> AGB</a> und der <a class="text-blue" target="_blank" href="{{route('datenschutz')}}"> Datenschutzerklärung</a> zu.</p>
-
                                 <button type="submit" class="green rounded cropBottom wide button">Gutschein kaufen</button>
                             </div>
                             {{ Form::close() }}

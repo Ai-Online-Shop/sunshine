@@ -27,7 +27,7 @@
                                                    value="{{get_option('currency_sign')}}"/>
                                             <input type="hidden" name="bn"
                                                    value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest"/>
-                                            <button type="submit"
+                                            <button type="submit" onclick="this.disabled=true;this.form.submit();"
                                                     class="blue button small">
                                                 Auswählen
                                             </button>
@@ -121,8 +121,7 @@
                                         <td>{{ $domenic7->gutschein_id }}</td>
                                     </tr>
                                 </table>
-                                <button type="submit" class="button blue" onclick="myFunction()">Jetzt kaufen
-                                </button>
+                                <button type="submit" class="button blue" onclick="this.disabled=true;this.form.submit();">Jetzt kaufen</button>
                                 <p id="demo" class="small bold text-red"></p>
                             </div>
                         </li>
