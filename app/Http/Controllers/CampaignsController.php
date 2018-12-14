@@ -395,7 +395,7 @@ class CampaignsController extends Controller
             }
             $gutschein_id = strtoupper($gutschein_id);
             //If checkout request come from reward
-            session(['cart' => [
+            session(['gutschein' => [
                 'cart_type' => 'donation',
                 'campaign_id' => '1',
                 'amount' => $request->amount,
@@ -425,7 +425,7 @@ class CampaignsController extends Controller
             }
             $gutschein_id = strtoupper($gutschein_id);
             //Or if comes from donate button
-            session(['cart' => [
+            session(['gutschein' => [
                 'cart_type' => 'donation',
                 'campaign_id' => '1',
                 'amount' => $request->amount,
@@ -580,20 +580,20 @@ class CampaignsController extends Controller
 
     public function sofort_success(Request $request)
     {
-        $id = session('cart.amount');
+        $id = session('gutschein.amount');
         if ($id >= 1) {
-            $domenic2 = session('cart.versandart');
-            $domenic3 = session('cart.amount');
-            $domenic4 = session('cart.nachname');
-            $domenic5 = session('cart.ccv');
-            $domenic6 = session('cart.email');
-            $domenic7 = session('cart.gutschein_id');
-            $domenic8= session('cart.adresse');
-            $domenic9 = session('cart.postleitzahl');
-            $domenic10 = session('cart.stadt');
-            $domenic11 = session('cart.land');
-            $domenic12 = session('cart.created_at');
-            $domenic13 = session('cart.user_id');
+            $domenic2 = session('gutschein.versandart');
+            $domenic3 = session('gutschein.amount');
+            $domenic4 = session('gutschein.nachname');
+            $domenic5 = session('gutschein.ccv');
+            $domenic6 = session('gutschein.email');
+            $domenic7 = session('gutschein.gutschein_id');
+            $domenic8= session('gutschein.adresse');
+            $domenic9 = session('gutschein.postleitzahl');
+            $domenic10 = session('gutschein.stadt');
+            $domenic11 = session('gutschein.land');
+            $domenic12 = session('gutschein.created_at');
+            $domenic13 = session('gutschein.user_id');
             //Find the campaign
             $cart = session('cart');
             $transaction_id = 'tran_' . time() . str_random(6);
@@ -650,20 +650,20 @@ class CampaignsController extends Controller
     }
     public function paypal_success(Request $request)
     {
-        $id = session('cart.amount');
+        $id = session('gutschein.amount');
         if ($id >= 1) {
-            $domenic2 = session('cart.versandart');
-            $domenic3 = session('cart.amount');
-            $domenic4 = session('cart.nachname');
-            $domenic5 = session('cart.ccv');
-            $domenic6 = session('cart.email');
-            $domenic7 = session('cart.gutschein_id');
-            $domenic8= session('cart.adresse');
-            $domenic9 = session('cart.postleitzahl');
-            $domenic10 = session('cart.stadt');
-            $domenic11 = session('cart.land');
-            $domenic12 = session('cart.created_at');
-            $domenic13 = session('cart.user_id');
+            $domenic2 = session('gutschein.versandart');
+            $domenic3 = session('gutschein.amount');
+            $domenic4 = session('gutschein.nachname');
+            $domenic5 = session('gutschein.ccv');
+            $domenic6 = session('gutschein.email');
+            $domenic7 = session('gutschein.gutschein_id');
+            $domenic8= session('gutschein.adresse');
+            $domenic9 = session('gutschein.postleitzahl');
+            $domenic10 = session('gutschein.stadt');
+            $domenic11 = session('gutschein.land');
+            $domenic12 = session('gutschein.created_at');
+            $domenic13 = session('gutschein.user_id');
             //Find the campaign
             $cart = session('cart');
             $transaction_id = 'tran_' . time() . str_random(6);
