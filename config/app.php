@@ -193,6 +193,7 @@ return [
         'Collective\Html\HtmlServiceProvider',
         Yajra\Datatables\DatatablesServiceProvider::class,
         'Stevebauman\Translation\TranslationServiceProvider',
+        Codedge\Sofortlib\SofortlibServiceProvider::class,
 
     ],
 
@@ -251,7 +252,16 @@ return [
         'Html' => 'Collective\Html\HtmlFacade',
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
-        'Translation' => 'Stevebauman\Translation\Facades\Translation'
+        'Translation' => 'Stevebauman\Translation\Facades\Translation',
+        'Billcode' => Codedge\Sofortlib\BillcodeFacade::class, // [2]
+        'BillcodeDetails' => Codedge\Sofortlib\BillcodeDetailsFacade::class, // [2]
+        'Ideal' => Codedge\Sofortlib\IdealFacade::class, // [2]
+        'IdealBanks' => Codedge\Sofortlib\IdealBanksFacade::class, // [2]
+        'Paycode' => Codedge\Sofortlib\PaycodeFacade::class, // [2]
+        'PaycodeDetails' => Codedge\Sofortlib\PaycodeDetailsFacade::class, // [2]
+        'Sofortueberweisung' => Codedge\Sofortlib\SofortueberweisungFacade::class, // [2]
+        'Refund' => Codedge\Sofortlib\RefundFacade::class, // [2]
+        'TransactionData' => Codedge\Sofortlib\TransactionDataFacade::class, // [2]
     ],
 
 ];

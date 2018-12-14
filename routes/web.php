@@ -58,6 +58,9 @@ Route::get('sparpläne', ['as' => 'sparpläne', 'uses' => 'SparplanController@in
 Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
 Route::get('verify', ['as' => 'verify', 'uses' => 'DashboardController@verify2']);
 Route::get('verified', ['as' => 'verified', 'uses' => 'DashboardController@verified']);
+Route::get('sofort-success', ['as' => 'sofort_success', 'uses' => 'CampaignsController@sofort_success']);
+Route::get('paypal-success', ['as' => 'paypal_success', 'uses' => 'CampaignsController@paypal_success']);
+Route::post('checkout/sofort', ['as' => 'sofort', 'uses' => 'CampaignsController@sofort']);
 
 Route::get('/downloadImmo', 'DashboardController@getDownload');
 Route::get('/downloadImmo2', 'DashboardController@getDownload2');

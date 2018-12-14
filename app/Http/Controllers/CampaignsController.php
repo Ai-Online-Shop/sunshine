@@ -20,6 +20,7 @@ use App\Mail\OurReminder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
+use Sofortueberweisung;
 
 class CampaignsController extends Controller
 {
@@ -406,7 +407,18 @@ class CampaignsController extends Controller
             session(['cart' => [
                 'cart_type' => 'donation',
                 'campaign_id' => '1',
-                'amount' => $request->amount,]]);
+                'amount' => $request->amount,
+                'ccv' => $request->ccv,
+                'gutschein_id' => $gutschein_id,
+                'versandart' => $request->versandart,
+                'amount' => $request->amount,
+                'nachname' => $request->nachname,
+                'adresse' => $request->adresse,
+                'postleitzahl' => $request->postleitzahl,
+                'stadt' => $request->stadt,
+                'land' => $request->land,
+                'email' => $request->email,
+                'user_id' => $request->campaign_id,]]);
 
             $payments_data = [
                 'ccv' => $request->ccv,
@@ -486,10 +498,7 @@ class CampaignsController extends Controller
             $total = number_format(($domenic2->versandart)+($domenic3->amount), 2);
 
             session(['cart' => [
-                'cart_type' => 'donation',
-                'campaign_id' => '1',
-
-                'amount' => number_format($total, 2)]]);
+                'total' => number_format($total, 2)]]);
 
             return view('admin.checkout', compact('title', 'campaign', 'reward', 'user',
                 'domenic2', $domenic2, $domenic3, 'domenic3', $request, 'request', $total, 'total'));
@@ -508,6 +517,7 @@ class CampaignsController extends Controller
         }
 
         $cart = session('cart');
+        $total = session('cart.total');
         $input = array_except($request->input(), '_token');
         session(['cart' => array_merge($cart, $input)]);
 
@@ -524,15 +534,170 @@ class CampaignsController extends Controller
 
         //dd(session('cart'));
         return view('admin.payment', compact('title', 'user', 'campaign',
-            'domenic2', $domenic2, $domenic3, 'domenic3',$domenic7,'domenic7', $domenic6, 'domenic6'));
+            'domenic2', $domenic2, $domenic3, 'domenic3',$domenic7,'domenic7', $domenic6, 'domenic6', 'total'));
     }
 
-    /**
-     * @param Request $request
-     * @return mixed
-     *
-     * Payment gateway PayPal
-     */
+    public function sofort(Request $request)
+    {
+        $amount = session('cart.total');
+        Sofortueberweisung::setAmount($amount);
+        Sofortueberweisung::setCurrencyCode('EUR');
+        Sofortueberweisung::setReason('Sunshine Wellness', 'Ihr Wellness Gutschein');
+        Sofortueberweisung::setSuccessUrl('https://sunshinewellness.de/sofort-success', true);
+        Sofortueberweisung::setAbortUrl('https://sunshinewellness.de/checkout');
+        Sofortueberweisung::setNotificationUrl('https://sunshinewellness.de');
+        Sofortueberweisung::sendRequest();
+        if (Sofortueberweisung::isError()) {
+            echo Sofortueberweisung::getError();
+        } else {
+            $transactionId = Sofortueberweisung::getTransactionId();
+            $paymentUrl = Sofortueberweisung::getPaymentUrl();
+            header('Location: ' . $paymentUrl);
+        }
+
+    }
+
+    public function sofort_success(Request $request)
+    {
+        $id = session('cart.id');
+        if ($id >= 1) {
+            $domenic2 = session('cart.versandart');
+            $domenic3 = session('cart.amount');
+            $domenic4 = session('cart.nachname');
+            $domenic5 = session('cart.ccv');
+            $domenic6 = session('cart.email');
+            $domenic7 = session('cart.gutschein_id');
+            $domenic8= session('cart.adresse');
+            $domenic9 = session('cart.postleitzahl');
+            $domenic10 = session('cart.stadt');
+            $domenic11 = session('cart.land');
+            $domenic12 = session('cart.created_at');
+            $domenic13 = session('cart.user_id');
+            //Find the campaign
+            $cart = session('cart');
+            $transaction_id = 'tran_' . time() . str_random(6);
+            // get unique recharge transaction id
+            while ((Payment::whereLocalTransactionId($transaction_id)->count()) > 0) {
+                $transaction_id = 'reid' . time() . str_random(5);
+            }
+            $transaction_id = strtoupper($transaction_id);
+            $rechnungsnummer = 'RE_' . str_random(5);
+            $payments_data = [
+                'campaign_id' => '888',
+                'reward_id' => '888',
+                'versandart' => $domenic2,
+                'gutschein' => $domenic3,
+                'name' => $domenic4,
+                'email' => $domenic6,
+                'adresse' => $domenic8,
+                'postleitzahl' => $domenic9,
+                'stadt' => $domenic10,
+                'rechnungsnummer' => $rechnungsnummer,
+                'land' => $domenic11,
+                'created_at_two' => $domenic12,
+                'widmung' => $domenic5,
+                'gutschein_id' => $domenic7,
+                'amount' => $domenic3,
+                'payment_method' => 'paypal',
+                'status' => 'success',
+                'currency' => 'EUR',
+                'local_transaction_id' => $transaction_id,
+                'user_id' => $domenic13,
+                'contributor_name_display' => session('cart.contributor_name_display'),
+            ];
+            //Create payment and clear it from session
+            $created_payment = Payment::create($payments_data);
+            //Create PDF And send it
+            $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
+            $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
+            Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request)
+            {
+                $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
+                $message->to($request->email)->subject('Gutschein als PDF im Anhang');
+                $message->bcc('sunshinewellness@web.de');
+                $message->attachData($pdf->output(), "gutschein.pdf");
+            });
+            Mail::send('emails.orders.shipped_rechnung', $payments_data, function ($message) use ($pdf2, $request) {
+                $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
+                $message->to($request->email)->subject('Rechnung als PDF im Anhang');
+                $message->bcc('sunshinewellness@web.de');
+                $message->attachData($pdf2->output(), "rechnung.pdf");
+            });
+            $request->session()->forget('cart');
+            return view('home.sofort_success');
+        }
+    }
+    public function paypal_success(Request $request)
+    {
+        $id = session('cart.id');
+        if ($id >= 1) {
+            $domenic2 = session('cart.versandart');
+            $domenic3 = session('cart.amount');
+            $domenic4 = session('cart.nachname');
+            $domenic5 = session('cart.ccv');
+            $domenic6 = session('cart.email');
+            $domenic7 = session('cart.gutschein_id');
+            $domenic8= session('cart.adresse');
+            $domenic9 = session('cart.postleitzahl');
+            $domenic10 = session('cart.stadt');
+            $domenic11 = session('cart.land');
+            $domenic12 = session('cart.created_at');
+            $domenic13 = session('cart.user_id');
+            //Find the campaign
+            $cart = session('cart');
+            $transaction_id = 'tran_' . time() . str_random(6);
+            // get unique recharge transaction id
+            while ((Payment::whereLocalTransactionId($transaction_id)->count()) > 0) {
+                $transaction_id = 'reid' . time() . str_random(5);
+            }
+            $transaction_id = strtoupper($transaction_id);
+            $rechnungsnummer = 'RE_' . str_random(5);
+            $payments_data = [
+                'campaign_id' => '888',
+                'reward_id' => '888',
+                'versandart' => $domenic2,
+                'gutschein' => $domenic3,
+                'name' => $domenic4,
+                'email' => $domenic6,
+                'adresse' => $domenic8,
+                'postleitzahl' => $domenic9,
+                'stadt' => $domenic10,
+                'rechnungsnummer' => $rechnungsnummer,
+                'land' => $domenic11,
+                'created_at_two' => $domenic12,
+                'widmung' => $domenic5,
+                'gutschein_id' => $domenic7,
+                'amount' => $domenic3,
+                'payment_method' => 'paypal',
+                'status' => 'success',
+                'currency' => 'EUR',
+                'local_transaction_id' => $transaction_id,
+                'user_id' => $domenic13,
+                'contributor_name_display' => session('cart.contributor_name_display'),
+            ];
+            //Create payment and clear it from session
+            $created_payment = Payment::create($payments_data);
+            //Create PDF And send it
+            $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
+            $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
+            Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request)
+            {
+                $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
+                $message->to($request->email)->subject('Gutschein als PDF im Anhang');
+                $message->bcc('sunshinewellness@web.de');
+                $message->attachData($pdf->output(), "gutschein.pdf");
+            });
+            Mail::send('emails.orders.shipped_rechnung', $payments_data, function ($message) use ($pdf2, $request) {
+                $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
+                $message->to($request->email)->subject('Rechnung als PDF im Anhang');
+                $message->bcc('sunshinewellness@web.de');
+                $message->attachData($pdf2->output(), "rechnung.pdf");
+            });
+            $request->session()->forget('cart');
+            return view('home.paypal_success');
+        }
+    }
+
     public function paypalRedirect(Request $request)
     {
         $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart'])->versandart;
