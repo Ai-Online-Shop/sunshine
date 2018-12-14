@@ -645,7 +645,7 @@ class CampaignsController extends Controller
                 $message->attachData($pdf2->output(), "rechnung.pdf");
             });
             $request->session()->forget('gutschein');
-            return view('admin.sofort_success');
+            return view('admin.sofort_succes');
         }
     }
     public function paypal_success(Request $request)
