@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112338896-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112338896-5');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
@@ -218,18 +227,18 @@
     </ul>
 </nav>
 {{ $slot }}
-<section class="slide autoHeight" style="background-color:#000;">
+<section class="slide white autoHeight" style="background-color:#000;">
     <div class="content">
         <div class="container">
             <div class="wrap">
-                <ul class="flex fix-10-12 ae-1 light micro text-white">
+                <ul class="flex fix-10-12 ae-1 light micro">
                     <li class="col-3-12"><p><a href="{{route('home')}}">Sunshine Wellness Crailsheim</a></p></li>
                     <li class="col-3-12"><p><a href="{{route('gelbinger')}}">Sunshine Wellness Gelbinger-Gasse</a></p></li>
                     <li class="col-3-12"><p><a href="{{route('impressum')}}">Impressum</a></p></li>
                     <li class="col-3-12"><p><a href="{{route('agb')}}">Allgemeine Geschäftsbedingungen</a></p></li>
                 </ul>
                 <div class="spread-bar-line2 ae-1 margin-bottom-4"></div>
-                <ul class="flex margin-left-2 margin-right-2 text-white">
+                <ul class="flex margin-left-2 margin-right-2">
                     <li class="col-3-12 center ae-2">
                         <a><svg class="middle" style="width:120px;height:50px; fill:#fff;">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -237,6 +246,9 @@
                         <ul class="menu margin-top-1 nav-text">
                             <li><span>Copyright © 2018 <a href="https://wolf-gate.com">Wolf-Gate</a> <br>
                 All rights reserved.</span></li>
+                            <li>
+                                <img class="wide margin-top-4" src="{{ asset('assets/img/paypal-logos.png') }}"/>
+                            </li>
                         </ul>
                     </li>
                     <li class="col-3-12 left col-tablet-1-1 nav-text ae-3">

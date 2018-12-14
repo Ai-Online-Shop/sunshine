@@ -15,18 +15,18 @@
     </div>
     </section>
 
-    <section class="slide autoHeight" style="background-color:#000;">
+    <section class="slide white autoHeight" style="background-color:#000;">
             <div class="content">
                 <div class="container">
                     <div class="wrap">
-                        <ul class="flex fix-10-12 ae-1 light micro text-white">
+                        <ul class="flex fix-10-12 ae-1 light micro">
                             <li class="col-3-12"><p><a href="{{route('sha')}}">Sunshine Wellness Schenkenseebad</a></p></li>
                             <li class="col-3-12"><p><a href="{{route('gelbinger')}}">Sunshine Wellness Gelbinger-Gasse</a></p></li>
                             <li class="col-3-12"><p><a href="{{route('impressum')}}">Impressum</a></p></li>
                             <li class="col-3-12"><p><a href="{{route('agb')}}">Allgemeine Geschäftsbedingungen</a></p></li>
                         </ul>
                         <div class="spread-bar-line2 ae-1 margin-bottom-4"></div>
-                        <ul class="flex margin-left-2 margin-right-2 text-white">
+                        <ul class="flex margin-left-2 margin-right-2">
                             <li class="col-3-12 center ae-2">
                                 <a><svg class="middle" style="width:120px;height:50px; fill:#fff;">
                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -34,6 +34,9 @@
                                 <ul class="menu margin-top-1 nav-text">
                                     <li><span>Copyright © 2018 <a href="https://wolf-gate.com">Wolf-Gate</a> <br>
                 All rights reserved.</span></li>
+                                    <li>
+                                        <img class="wide margin-top-4" src="{{ asset('assets/img/paypal-logos.png') }}"/>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="col-3-12 left col-tablet-1-1 nav-text ae-3">
