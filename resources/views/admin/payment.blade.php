@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    @if($campaign->min_amount)
+
         <section class="slide background-blue autoHeight">
             <div class="content">
                 <div class="container">
@@ -27,9 +27,7 @@
                 </div>
             </div>
         </section>
-    @endif
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-
     <script>
         paypal.Button.render({
 
