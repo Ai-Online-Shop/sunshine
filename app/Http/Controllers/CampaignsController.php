@@ -499,10 +499,6 @@ class CampaignsController extends Controller
     {
         $title = trans('app.checkout');
 
-        if (!session('cart')) {
-            return view('admin.checkout_empty', compact('title', 'user'));
-        }
-
         $reward = null;
         if (session('cart.cart_type') == 'reward') {
             $reward = Reward::find(session('cart.reward_id'));
