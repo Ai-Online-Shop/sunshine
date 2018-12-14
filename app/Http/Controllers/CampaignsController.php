@@ -631,16 +631,16 @@ class CampaignsController extends Controller
             //Create PDF And send it
             $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
             $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
-            Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request)
+            Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request, $domenic6)
             {
                 $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
-                $message->to($request->email)->subject('Gutschein als PDF im Anhang');
+                $message->to($domenic6)->subject('Gutschein als PDF im Anhang');
                 $message->bcc('sunshinewellness@web.de');
                 $message->attachData($pdf->output(), "gutschein.pdf");
             });
-            Mail::send('emails.orders.shipped_rechnung', $payments_data, function ($message) use ($pdf2, $request) {
+            Mail::send('emails.orders.shipped_rechnung', $payments_data, function ($message) use ($pdf2, $request, $domenic6) {
                 $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
-                $message->to($request->email)->subject('Rechnung als PDF im Anhang');
+                $message->to($domenic6)->subject('Rechnung als PDF im Anhang');
                 $message->bcc('sunshinewellness@web.de');
                 $message->attachData($pdf2->output(), "rechnung.pdf");
             });
@@ -701,16 +701,16 @@ class CampaignsController extends Controller
             //Create PDF And send it
             $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
             $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
-            Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request)
+            Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request, $domenic6)
             {
                 $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
-                $message->to($request->email)->subject('Gutschein als PDF im Anhang');
+                $message->to($domenic6)->subject('Gutschein als PDF im Anhang');
                 $message->bcc('sunshinewellness@web.de');
                 $message->attachData($pdf->output(), "gutschein.pdf");
             });
-            Mail::send('emails.orders.shipped_rechnung', $payments_data, function ($message) use ($pdf2, $request) {
+            Mail::send('emails.orders.shipped_rechnung', $payments_data, function ($message) use ($pdf2, $request, $domenic6) {
                 $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
-                $message->to($request->email)->subject('Rechnung als PDF im Anhang');
+                $message->to($domenic6)->subject('Rechnung als PDF im Anhang');
                 $message->bcc('sunshinewellness@web.de');
                 $message->attachData($pdf2->output(), "rechnung.pdf");
             });
