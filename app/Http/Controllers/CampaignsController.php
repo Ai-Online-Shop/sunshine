@@ -388,8 +388,29 @@ class CampaignsController extends Controller
     {
 
         if ($reward_id) {
+            $gutschein_id = 'gutschein_' . time() . str_random(6);
+            // get unique recharge transaction id
+            while ((Gutschein::whereGutscheinId($gutschein_id)->count()) > 0) {
+                $gutschein_id = 'reid' . time() . str_random(5);
+            }
+            $gutschein_id = strtoupper($gutschein_id);
             //If checkout request come from reward
-            session(['cart' => ['cart_type' => 'reward', 'reward_id' => $reward_id]]);
+            session(['cart' => [
+                'cart_type' => 'donation',
+                'campaign_id' => '1',
+                'amount' => $request->amount,
+                'ccv' => $request->ccv,
+                'gutschein_id' => $gutschein_id,
+                'versandart' => $request->versandart,
+                'amount' => $request->amount,
+                'nachname' => $request->nachname,
+                'adresse' => $request->adresse,
+                'postleitzahl' => $request->postleitzahl,
+                'stadt' => $request->stadt,
+                'land' => $request->land,
+                'email' => $request->email,
+                'user_id' => $request->campaign_id,]]);
+
 
             $reward = Reward::find($reward_id);
             if ($reward->campaign->is_ended()) {
