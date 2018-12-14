@@ -497,32 +497,18 @@ class CampaignsController extends Controller
      */
     public function checkout(Request $request)
     {
-        $title = trans('app.checkout');
 
-        $reward = null;
-        if (session('cart.cart_type') == 'reward') {
-            $reward = Reward::find(session('cart.reward_id'));
-            $campaign = Campaign::find($reward->campaign_id);
+        $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
+        $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
 
-        } elseif (session('cart.cart_type') == 'donation') {
-            $campaign = Campaign::find(session('cart.campaign_id'));
-        }
+        $total = number_format(($domenic2->versandart) + ($domenic3->amount), 2);
 
-        if (session('cart')) {
-            $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
-            $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
+        session(['cart' => [
+            'total' => number_format($total, 2)]]);
 
-            $total = number_format(($domenic2->versandart)+($domenic3->amount), 2);
+        return view('admin.checkout', compact('title', 'campaign', 'reward', 'user',
+            'domenic2', $domenic2, $domenic3, 'domenic3', $request, 'request', $total, 'total'));
 
-            session(['cart' => [
-                'total' => number_format($total, 2)]]);
-
-            return view('admin.checkout', compact('title', 'campaign', 'reward', 'user',
-                'domenic2', $domenic2, $domenic3, 'domenic3', $request, 'request', $total, 'total'));
-        }
-
-
-        return view('admin.checkout_empty', compact('title', 'user'));
     }
 
     public function checkoutPost(Request $request)
@@ -551,7 +537,7 @@ class CampaignsController extends Controller
 
         //dd(session('cart'));
         return view('admin.payment', compact('title', 'user', 'campaign',
-            'domenic2', $domenic2, $domenic3, 'domenic3',$domenic7,'domenic7', $domenic6, 'domenic6', 'total'));
+            'domenic2', $domenic2, $domenic3, 'domenic3', $domenic7, 'domenic7', $domenic6, 'domenic6', 'total'));
     }
 
     public function sofort(Request $request)
@@ -584,7 +570,7 @@ class CampaignsController extends Controller
             $domenic5 = session('gutschein.ccv');
             $domenic6 = session('gutschein.email');
             $domenic7 = session('gutschein.gutschein_id');
-            $domenic8= session('gutschein.adresse');
+            $domenic8 = session('gutschein.adresse');
             $domenic9 = session('gutschein.postleitzahl');
             $domenic10 = session('gutschein.stadt');
             $domenic11 = session('gutschein.land');
@@ -627,8 +613,7 @@ class CampaignsController extends Controller
             //Create PDF And send it
             $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
             $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
-            Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request, $domenic6)
-            {
+            Mail::send('emails.orders.shipped', $payments_data, function ($message) use ($pdf, $request, $domenic6) {
                 $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
                 $message->to($domenic6)->subject('Gutschein als PDF im Anhang');
                 $message->bcc('sunshinewellness@web.de');
@@ -644,6 +629,7 @@ class CampaignsController extends Controller
             return view('admin.sofort_succes');
         }
     }
+
     public function paypal_success(Request $request)
     {
         $id = session('gutschein.amount');
@@ -654,7 +640,7 @@ class CampaignsController extends Controller
             $domenic5 = session('gutschein.ccv');
             $domenic6 = session('gutschein.email');
             $domenic7 = session('gutschein.gutschein_id');
-            $domenic8= session('gutschein.adresse');
+            $domenic8 = session('gutschein.adresse');
             $domenic9 = session('gutschein.postleitzahl');
             $domenic10 = session('gutschein.stadt');
             $domenic11 = session('gutschein.land');
@@ -697,8 +683,7 @@ class CampaignsController extends Controller
             //Create PDF And send it
             $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
             $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
-            Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request, $domenic6)
-            {
+            Mail::send('emails.orders.shipped', $payments_data, function ($message) use ($pdf, $request, $domenic6) {
                 $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
                 $message->to($domenic6)->subject('Gutschein als PDF im Anhang');
                 $message->bcc('sunshinewellness@web.de');
@@ -724,7 +709,7 @@ class CampaignsController extends Controller
         $domenic5 = Gutschein::orderBy('created_at', 'desc')->first(['ccv'])->ccv;
         $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email'])->email;
         $domenic7 = Gutschein::orderBy('created_at', 'desc')->first(['gutschein_id'])->gutschein_id;
-        $domenic8= Gutschein::orderBy('created_at', 'desc')->first(['adresse'])->adresse;
+        $domenic8 = Gutschein::orderBy('created_at', 'desc')->first(['adresse'])->adresse;
         $domenic9 = Gutschein::orderBy('created_at', 'desc')->first(['postleitzahl'])->postleitzahl;
         $domenic10 = Gutschein::orderBy('created_at', 'desc')->first(['stadt'])->stadt;
         $domenic11 = Gutschein::orderBy('created_at', 'desc')->first(['land'])->land;
@@ -735,8 +720,8 @@ class CampaignsController extends Controller
         if (!session('cart')) {
             return view('admin.checkout_empty', compact('title', 'user',
                 'domenic2', $domenic2, $domenic3, 'domenic3',
-                'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7, 'domenic7',$domenic8, 'domenic8',$domenic9,
-                'domenic9',$domenic10, 'domenic10',$domenic11, 'domenic11',$domenic12, 'domenic12'));
+                'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7, 'domenic7', $domenic8, 'domenic8', $domenic9,
+                'domenic9', $domenic10, 'domenic10', $domenic11, 'domenic11', $domenic12, 'domenic12'));
         }
         //Find the campaign
         $cart = session('cart');
@@ -791,8 +776,7 @@ class CampaignsController extends Controller
         //Create PDF And send it
         $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
         $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
-        Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request)
-        {
+        Mail::send('emails.orders.shipped', $payments_data, function ($message) use ($pdf, $request) {
             $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
             $message->to($request->email)->subject('Gutschein als PDF im Anhang');
             $message->bcc('sunshinewellness@web.de');
@@ -1006,7 +990,7 @@ class CampaignsController extends Controller
         $domenic5 = Gutschein::orderBy('created_at', 'desc')->first(['ccv'])->ccv;
         $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email'])->email;
         $domenic7 = Gutschein::orderBy('created_at', 'desc')->first(['gutschein_id'])->gutschein_id;
-        $domenic8= Gutschein::orderBy('created_at', 'desc')->first(['adresse'])->adresse;
+        $domenic8 = Gutschein::orderBy('created_at', 'desc')->first(['adresse'])->adresse;
         $domenic9 = Gutschein::orderBy('created_at', 'desc')->first(['postleitzahl'])->postleitzahl;
         $domenic10 = Gutschein::orderBy('created_at', 'desc')->first(['stadt'])->stadt;
         $domenic11 = Gutschein::orderBy('created_at', 'desc')->first(['land'])->land;
@@ -1080,8 +1064,7 @@ class CampaignsController extends Controller
 
         $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
         $pdf2 = PDF::loadView('pdf.pdf_rechnung', $payments_data);
-        Mail::send('emails.orders.shipped', $payments_data, function($message) use($pdf, $request)
-        {
+        Mail::send('emails.orders.shipped', $payments_data, function ($message) use ($pdf, $request) {
             $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
             $message->to($request->email)->subject('Gutschein als PDF im Anhang');
             $message->bcc('sunshinewellness@web.de');
