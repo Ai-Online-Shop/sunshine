@@ -1,7 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
-
         <section class="slide background-blue autoHeight">
             <div class="content">
                 <div class="container">

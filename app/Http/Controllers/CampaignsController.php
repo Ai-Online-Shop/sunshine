@@ -559,7 +559,7 @@ class CampaignsController extends Controller
 
     public function sofort_success(Request $request)
     {
-        $id = session('cart.id');
+        $id = session('cart.amount');
         if ($id >= 1) {
             $domenic2 = session('cart.versandart');
             $domenic3 = session('cart.amount');
@@ -629,7 +629,7 @@ class CampaignsController extends Controller
     }
     public function paypal_success(Request $request)
     {
-        $id = session('cart.id');
+        $id = session('cart.amount');
         if ($id >= 1) {
             $domenic2 = session('cart.versandart');
             $domenic3 = session('cart.amount');
