@@ -645,7 +645,7 @@ class CampaignsController extends Controller
                 $message->attachData($pdf2->output(), "rechnung.pdf");
             });
             $request->session()->forget('cart');
-            return view('home.sofort_success');
+            return view('admin.sofort_success');
         }
     }
     public function paypal_success(Request $request)
@@ -715,7 +715,8 @@ class CampaignsController extends Controller
                 $message->attachData($pdf2->output(), "rechnung.pdf");
             });
             $request->session()->forget('cart');
-            return view('home.paypal_success');
+            return view('admin.paypal_success');
+
         }
     }
 
