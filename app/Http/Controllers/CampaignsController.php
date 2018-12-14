@@ -644,7 +644,7 @@ class CampaignsController extends Controller
                 $message->bcc('sunshinewellness@web.de');
                 $message->attachData($pdf2->output(), "rechnung.pdf");
             });
-            $request->session()->forget('cart');
+            $request->session()->forget('gutschein');
             return view('admin.sofort_success');
         }
     }
@@ -714,7 +714,7 @@ class CampaignsController extends Controller
                 $message->bcc('sunshinewellness@web.de');
                 $message->attachData($pdf2->output(), "rechnung.pdf");
             });
-            $request->session()->forget('cart');
+            $request->session()->forget('gutschein');
             return view('admin.paypal_success');
 
         }
