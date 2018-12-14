@@ -574,7 +574,7 @@ class CampaignsController extends Controller
             $domenic9 = session('gutschein.postleitzahl');
             $domenic10 = session('gutschein.stadt');
             $domenic11 = session('gutschein.land');
-            $domenic12 = session('gutschein.created_at');
+            $domenic12 = date("j. F, Y");
             $domenic13 = session('gutschein.user_id');
             //Find the campaign
             $cart = session('cart');
@@ -644,7 +644,7 @@ class CampaignsController extends Controller
             $domenic9 = session('gutschein.postleitzahl');
             $domenic10 = session('gutschein.stadt');
             $domenic11 = session('gutschein.land');
-            $domenic12 = session('gutschein.created_at');
+            $domenic12 = date("j. F, Y");
             $domenic13 = session('gutschein.user_id');
             //Find the campaign
             $cart = session('cart');
