@@ -58,8 +58,8 @@
             // Create a PayPal app: https://developer.paypal.com/developer/applications/create
 
             client: {
-                sandbox: 'AV3VtIp3puVkNRIl3SmbsPKr60-4Aa-kHTnExB3jxv1OGNy9Wmki8xnvk2JcHRh7QV7Eok69_SNKmjLX',
-                production: 'AbtfZJYlwoiuQuzLEojHucjLjLQ1cVpMgRU9r6fvNU4387aDooWIuB6IFvkGxkl2bKMBJHkC-P-P93TZ'
+                sandbox: 'AbicHZxsDmuUJcT1uAZyDtFudheiyPySrHrfanrLA3aMkHoIWxL0B4yYr5EPvmAqY01xaqVcQOF81FUF',
+                production: 'AUbkd1KelekPz0XhQb-vdpQ1a2SrS8qTuJ3IK3wu0qu8wxmsBV7h9FN-Nlxtye73TU7zxPWq9djhbwFw'
             },
             payment: function (data, actions) {
                 return actions.payment.create({
