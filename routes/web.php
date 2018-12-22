@@ -60,6 +60,7 @@ Route::get('verify', ['as' => 'verify', 'uses' => 'DashboardController@verify2']
 Route::get('verified', ['as' => 'verified', 'uses' => 'DashboardController@verified']);
 Route::get('sofort-success', ['as' => 'sofort_success', 'uses' => 'CampaignsController@sofort_success']);
 Route::get('paypal-success', ['as' => 'paypal_success', 'uses' => 'CampaignsController@paypal_success']);
+Route::get('vorkasse-success', ['as' => 'vorkasse_success', 'uses' => 'CampaignsController@vorkasse_success']);
 Route::post('checkout/sofort', ['as' => 'sofort', 'uses' => 'CampaignsController@sofort']);
 
 Route::get('/downloadImmo', 'DashboardController@getDownload');

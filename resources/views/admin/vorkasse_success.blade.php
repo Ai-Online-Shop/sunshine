@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+
     <section class="slide" style="background:#1a1a1a">
         <div class="content">
             <div class="container">
@@ -23,4 +25,7 @@
             </div>
         </div>
     </section>
+
+
+
 @endsection

@@ -700,6 +700,76 @@ class CampaignsController extends Controller
 
         }
     }
+    public function vorkasse_success(Request $request)
+    {
+        $id = session('gutschein.amount');
+        if ($id >= 1) {
+            $domenic2 = session('gutschein.versandart');
+            $domenic3 = session('gutschein.amount');
+            $domenic4 = session('gutschein.nachname');
+            $domenic5 = session('gutschein.ccv');
+            $domenic6 = session('gutschein.email');
+            $domenic7 = session('gutschein.gutschein_id');
+            $domenic8 = session('gutschein.adresse');
+            $domenic9 = session('gutschein.postleitzahl');
+            $domenic10 = session('gutschein.stadt');
+            $domenic11 = session('gutschein.land');
+            $domenic12 = date("j. F, Y");
+            $domenic13 = session('gutschein.user_id');
+            //Find the campaign
+            $cart = session('cart');
+            $transaction_id = 'tran_' . time() . str_random(6);
+            // get unique recharge transaction id
+            while ((Payment::whereLocalTransactionId($transaction_id)->count()) > 0) {
+                $transaction_id = 'reid' . time() . str_random(5);
+            }
+            $transaction_id = strtoupper($transaction_id);
+            $rechnungsnummer = 'RE_' . str_random(5);
+            $payments_data = [
+                'campaign_id' => '888',
+                'reward_id' => '888',
+                'versandart' => $domenic2,
+                'gutschein' => $domenic3,
+                'name' => $domenic4,
+                'email' => $domenic6,
+                'adresse' => $domenic8,
+                'postleitzahl' => $domenic9,
+                'stadt' => $domenic10,
+                'rechnungsnummer' => $rechnungsnummer,
+                'land' => $domenic11,
+                'created_at_two' => $domenic12,
+                'widmung' => $domenic5,
+                'gutschein_id' => $domenic7,
+                'amount' => $domenic3,
+                'payment_method' => 'Vorkasse',
+                'status' => 'pending',
+                'currency' => 'EUR',
+                'local_transaction_id' => $transaction_id,
+                'user_id' => $domenic13,
+                'contributor_name_display' => session('cart.contributor_name_display'),
+            ];
+            //Create payment and clear it from session
+            $created_payment = Payment::create($payments_data);
+            //Create PDF And send it
+            $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
+            $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
+            Mail::send('emails.orders.shipped', $payments_data, function ($message) use ($pdf, $request, $domenic6) {
+                $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
+                $message->to($domenic6)->subject('Gutschein als PDF im Anhang');
+                $message->bcc('sunshinewellness@web.de');
+                $message->attachData($pdf->output(), "gutschein.pdf");
+            });
+            Mail::send('emails.orders.shipped_rechnung', $payments_data, function ($message) use ($pdf2, $request, $domenic6) {
+                $message->from('sunshinewellness@web.de', 'Sunshine Wellness');
+                $message->to($domenic6)->subject('Rechnung als PDF im Anhang');
+                $message->bcc('sunshinewellness@web.de');
+                $message->attachData($pdf2->output(), "rechnung.pdf");
+            });
+            $request->session()->forget('gutschein');
+            return view('admin.vorkasse_success');
+
+        }
+    }
 
     public function paypalRedirect(Request $request)
     {
