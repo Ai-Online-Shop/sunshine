@@ -133,8 +133,8 @@
             // Create a PayPal app: https://developer.paypal.com/developer/applications/create
 
             client: {
-                sandbox: 'AbicHZxsDmuUJcT1uAZyDtFudheiyPySrHrfanrLA3aMkHoIWxL0B4yYr5EPvmAqY01xaqVcQOF81FUF',
-                production: 'AUbkd1KelekPz0XhQb-vdpQ1a2SrS8qTuJ3IK3wu0qu8wxmsBV7h9FN-Nlxtye73TU7zxPWq9djhbwFw'
+                sandbox: 'AdDpHfxM96oBMBuVqZbnY9VWEeDPseloJRBXDtVObDvTdMMFJgzgrtWb3t7HOeTy_e6FNZeni63Ov9uZ',
+                production: 'AQ0SvXtGvyqHscuJx4K9INxm44ul547cqZVgJglNCkRin8WmeRI5eiJY2ZLcOYlciHG2di1dyJHKC_50'
             },
             payment: function (data, actions) {
                 return actions.payment.create({
@@ -146,7 +146,7 @@
                         ],
                         redirect_urls: {
                             return_url: 'https://sunshinewellness.de/paypal-success',
-                            cancel_url: 'https:      hinewellness.de/checkout'
+                            cancel_url: 'https:sunshinewellness.de/checkout'
                         }
                     }
                 });
