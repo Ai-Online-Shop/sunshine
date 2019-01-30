@@ -700,6 +700,7 @@ class CampaignsController extends Controller
 
         }
     }
+
     public function vorkasse_success(Request $request)
     {
         $id = session('gutschein.amount');
@@ -748,9 +749,7 @@ class CampaignsController extends Controller
                 'user_id' => $domenic13,
                 'contributor_name_display' => session('cart.contributor_name_display'),
             ];
-            //Create payment and clear it from session
             $created_payment = Payment::create($payments_data);
-            //Create PDF And send it
             $pdf2 = PDF::loadView('pdf.rechnung_paypal', $payments_data);
             $pdf = PDF::loadView('pdf.pdf_zahlungsdetails', $payments_data);
             Mail::send('emails.orders.shipped', $payments_data, function ($message) use ($pdf, $request, $domenic6) {

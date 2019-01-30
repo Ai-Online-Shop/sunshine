@@ -124,7 +124,7 @@
             <td></td>
             <td></td>
             <td><b>GESAMT:</b></td>
-            <td><b>{{$amount - $versandart}} EUR</b></td>
+            <td><b>{{$amount + $versandart}} EUR</b></td>
         </tr>
     @else
         <tr>
