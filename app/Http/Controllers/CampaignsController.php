@@ -601,7 +601,7 @@ class CampaignsController extends Controller
                 'widmung' => $domenic5,
                 'gutschein_id' => $domenic7,
                 'amount' => $domenic3,
-                'payment_method' => 'paypal',
+                'payment_method' => 'Sofort',
                 'status' => 'success',
                 'currency' => 'EUR',
                 'local_transaction_id' => $transaction_id,
