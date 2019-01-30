@@ -119,12 +119,21 @@
         <td>{{ $versandart }} EUR</td>
         <td>{{ $versandart }} EUR</td>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td><b>GESAMT:</b></td>
-        <td><b>{{ $amount }} EUR</b></td>
-    </tr>
+    @if($versandart > 0)
+        <tr>
+            <td></td>
+            <td></td>
+            <td><b>GESAMT:</b></td>
+            <td><b>{{$amount - $versandart}} EUR</b></td>
+        </tr>
+    @else
+        <tr>
+            <td></td>
+            <td></td>
+            <td><b>GESAMT:</b></td>
+            <td><b>{{$amount}} EUR</b></td>
+        </tr>
+    @endif
     </tbody>
 </table>
 <p class="center">Wir bedanken uns für Ihre Bestellung und wünschen Ihnen viel Spaß & Erholung mit Ihrem Gutschein!</p>
