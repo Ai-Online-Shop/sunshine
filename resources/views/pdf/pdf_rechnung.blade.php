@@ -110,20 +110,20 @@
     <tr>
         <td>1</td>
         <td>Gutschein Sunshine Wellness Crailsheim</td>
-        <td>{{$gutschein}} EUR</td>
-        <td>{{$gutschein}} EUR</td>
+        <td>{{ $gutschein }} EUR</td>
+        <td>{{ $gutschein }} EUR</td>
     </tr>
     <tr>
         <td>1</td>
         <td>Versandkosten</td>
-        <td>{{$versandart}} EUR</td>
-        <td>{{$versandart}} EUR</td>
+        <td>{{ $versandart }} EUR</td>
+        <td>{{ $versandart }} EUR</td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td><b>GESAMT:</b></td>
-        <td><b>{{$amount}} EUR</b></td>
+        <td><b>{{ $amount }} EUR</b></td>
     </tr>
     </tbody>
 </table>
