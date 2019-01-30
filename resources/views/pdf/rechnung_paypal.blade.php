@@ -92,7 +92,7 @@
 <p class="center"><b>Adresse: </b> {{$adresse}}</p>
 <p class="center"><b>PLZ: </b> {{$postleitzahl}}</p>
 <p class="center"><b>Ort: </b> {{$stadt}}</p>
-<p class="center"><b>Zahlart: </b> PayPal</p>
+<p class="center"><b>Zahlart: </b> {{$payment_method}}</p>
 <p class="margin">
 <h2 class="center margin-2"><strong>Rechnung</strong>
     <span class="margin-4">RE-Nr: {{$rechnungsnummer}}</span>
@@ -133,6 +133,6 @@
 <p class="center">IBAN: DE60622500300001872110</p>
 <p class="center">Bank: Sparkasse</p>
 <p class="center">BIC: SOLADES1SHA</p>
-<p class="center">Verwendungszweck: Sun-Gutschein/2017</p>
+<p class="center">Verwendungszweck: Sun-Gutschein/2019</p>
 </body>
 </html>

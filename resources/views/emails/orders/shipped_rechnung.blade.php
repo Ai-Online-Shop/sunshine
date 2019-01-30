@@ -980,7 +980,7 @@
 
                             <tr>
                                 <td style="text-align: center; font-size:14px; font-family:'Droid Serif' , arial; font-weight:normal ; line-height:25px; color: #878787;">
-                                    &copy; 2017. Wolf-Gate - All rights reserved.
+                                    &copy; 2019. Wolf-Gate - All rights reserved.
                                 </td>
                             </tr>
                             <tr>
