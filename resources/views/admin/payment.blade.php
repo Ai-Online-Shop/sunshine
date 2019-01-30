@@ -131,10 +131,9 @@
 
             // PayPal Client IDs - replace with your own
             // Create a PayPal app: https://developer.paypal.com/developer/applications/create
-
             client: {
-                sandbox: 'AdDpHfxM96oBMBuVqZbnY9VWEeDPseloJRBXDtVObDvTdMMFJgzgrtWb3t7HOeTy_e6FNZeni63Ov9uZ',
-                production: 'AQ0SvXtGvyqHscuJx4K9INxm44ul547cqZVgJglNCkRin8WmeRI5eiJY2ZLcOYlciHG2di1dyJHKC_50'
+                sandbox: 'AZaT7soOWv_HVKoRh6-E4nDLG5UR4L_2YNudHOKJIAUOP1hZBDm17ogthtrPvsDK4RTFKVqUuaLJP3KX',
+                production: 'Afhe0fMWaeh7vMR81vQGH66MO-w521b-4OfTYD5x1skl_SVNWLvFbspWKxPn_9MGx0sdjFtmDTj78rft'
             },
             payment: function (data, actions) {
                 return actions.payment.create({
