@@ -104,15 +104,13 @@
     <script>
         paypal.Button.render({
 
-            // Set your environment
-
             env: 'production', // sandbox | production
 
             // Specify the style of the button
 
             style: {
                 layout: 'vertical',  // horizontal | vertical
-                size: 'responsive',    // medium | large | responsive
+                size: 'large',    // medium | large | responsive
                 shape: 'pill',      // pill | rect
                 color: 'gold'       // gold | blue | silver | black
             },
@@ -128,9 +126,6 @@
                 allowed: [paypal.FUNDING.CARD],
                 disallowed: []
             },
-
-            // PayPal Client IDs - replace with your own
-            // Create a PayPal app: https://developer.paypal.com/developer/applications/create
             client: {
                 sandbox: 'AZaT7soOWv_HVKoRh6-E4nDLG5UR4L_2YNudHOKJIAUOP1hZBDm17ogthtrPvsDK4RTFKVqUuaLJP3KX',
                 production: 'Afhe0fMWaeh7vMR81vQGH66MO-w521b-4OfTYD5x1skl_SVNWLvFbspWKxPn_9MGx0sdjFtmDTj78rft'
@@ -145,7 +140,7 @@
                         ],
                         redirect_urls: {
                             return_url: 'https://sunshinewellness.de/paypal-success',
-                            cancel_url: 'https:sunshinewellness.de/checkout'
+                            cancel_url: 'https://sunshinewellness.de/checkout'
                         }
                     }
                 });
