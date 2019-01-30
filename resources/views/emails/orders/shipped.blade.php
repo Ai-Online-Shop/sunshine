@@ -394,7 +394,7 @@
                 </tr>
                 <tr>
                     <td style="line-height:0; text-align:center">
-                        <img alt="logo" width="220" src="http://sunshinewellness.de/assets/svg/sun-logo.svg">
+                        <img alt="logo" width="220" src="https://sunshinewellness.de/assets/svg/sun-logo.svg">
                     </td>
                 </tr>
                 <tr>
@@ -447,7 +447,7 @@
 
                     <!-- Start Left Line -->
                     <td valign="top" width="132" style="line-height:0;">
-                        <img alt="div" src="http://sunshinewellness.de/assets/img/div.jpg">
+                        <img alt="div" src="https://sunshinewellness.de/assets/img/div.jpg">
                     </td>
                     <!-- End Left Line -->
 
@@ -517,19 +517,19 @@
                                             <td width=""
                                                 style="text-align:center; font-size:15px; font-family:'Playfair Display' , arial; font-weight:normal ; line-height:21px; color: #878787; "
                                                 class="menu">
-                                                <a href="http://sunshinewellness.de/angebote"
+                                                <a href="https://sunshinewellness.de/angebote"
                                                    style="text-align:center; font-size:15px; font-family:'Playfair Display' , arial; font-weight:normal ; line-height:21px; color: #878787; text-decoration:none; ">Angebote</a>
                                                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                <a href="http://sunshinewellness.de/impressionen"
+                                                <a href="https://sunshinewellness.de/impressionen"
                                                    style="text-align:center; font-size:15px; font-family:'Playfair Display' , arial; font-weight:normal ; line-height:21px; color: #878787; text-decoration:none; ">Impressionen</a>
                                                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                <a href="http://sunshinewellness.de/impressionen"
+                                                <a href="https://sunshinewellness.de/impressionen"
                                                    style="text-align:center; font-size:15px; font-family:'Playfair Display' , arial; font-weight:normal ; line-height:21px; color: #878787; text-decoration:none; ">Team</a>
                                                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                <a href="http://sunshinewellness.de/kontakt"
+                                                <a href="https://sunshinewellness.de/kontakt"
                                                    style="text-align:center; font-size:15px; font-family:'Playfair Display' , arial; font-weight:normal ; line-height:21px; color: #878787; text-decoration:none; ">Kontakt</a>
                                                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                <a href="http://sunshinewellness.de/gutschein"
+                                                <a href="https://sunshinewellness.de/gutschein"
                                                    style="text-align:center; font-size:15px; font-family:'Playfair Display' , arial; font-weight:normal ; line-height:21px; color: #878787; text-decoration:none; ">Gutschein</a>
                                             </td>
 
@@ -597,7 +597,7 @@
 
                     <!-- Start Left Line -->
                     <td valign="top" width="132" style="line-height:0;">
-                        <img alt="div" src="http://sunshinewellness.de/assets/img/div.jpg">
+                        <img alt="div" src="https://sunshinewellness.de/assets/img/div.jpg">
                     </td>
                     <!-- End Left Line -->
 
@@ -701,7 +701,7 @@
                                         <tr>
                                             <td class="vmore" style="padding: 0 30px;" bgcolor="274475" height="40">
                                                 <a style="display:block; height:40px; text-decoration:none; line-height: 40px; text-align: center; color: #fff; font-size:14px; font-weight: bold; font-family:'Droid Serif' , arial;"
-                                                   href="http://sunshinewellness.de/kontakt">Jetzt Termin
+                                                   href="https://sunshinewellness.de/kontakt">Jetzt Termin
                                                     ausmachen</a>
                                             </td>
                                         </tr>
@@ -768,7 +768,7 @@
 
                     <!-- Start Left Line -->
                     <td valign="top" width="132" style="line-height:0;">
-                        <img alt="div" src="http://sunshinewellness.de/assets/img/div.jpg">
+                        <img alt="div" src="https://sunshinewellness.de/assets/img/div.jpg">
                     </td>
                     <!-- End Left Line -->
 
@@ -894,7 +894,7 @@
                                                     <tr>
 
                                                         <td style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; height: 61px;">
-                                                            <a href="http://sunshinewellness.de/angebote"
+                                                            <a href="https://sunshinewellness.de/angebote"
                                                                style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; text-decoration:none">READ
                                                                 MORE &nbsp;&nbsp;></a>
                                                         </td>
@@ -946,7 +946,7 @@
                                                     <tr>
 
                                                         <td style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; height: 61px;">
-                                                            <a href="http://sunshinewellness.de/angebote"
+                                                            <a href="https://sunshinewellness.de/angebote"
                                                                style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; text-decoration:none">READ
                                                                 MORE &nbsp;&nbsp;></a>
                                                         </td>
@@ -998,7 +998,7 @@
                                                     <tr>
 
                                                         <td style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; height: 61px;">
-                                                            <a href="http://sunshinewellness.de/angebote"
+                                                            <a href="https://sunshinewellness.de/angebote"
                                                                style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; text-decoration:none">READ
                                                                 MORE &nbsp;&nbsp;></a>
                                                         </td>
@@ -1050,7 +1050,7 @@
                                                     <tr>
 
                                                         <td style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; height: 61px;">
-                                                            <a href="http://sunshinewellness.de/angebote"
+                                                            <a href="https://sunshinewellness.de/angebote"
                                                                style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; text-decoration:none">READ
                                                                 MORE &nbsp;&nbsp;></a>
                                                         </td>
@@ -1102,7 +1102,7 @@
                                                     <tr>
 
                                                         <td style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; height: 61px;">
-                                                            <a href="http://sunshinewellness.de/angebote"
+                                                            <a href="https://sunshinewellness.de/angebote"
                                                                style="text-align: center; font-size:11px; font-family:'Droid Serif' , arial; font-weight:normal ; color: #274475; text-decoration:none">READ
                                                                 MORE &nbsp;&nbsp;></a>
                                                         </td>
@@ -1193,7 +1193,7 @@
 
                     <!-- Start Left Line -->
                     <td valign="top" width="132" style="line-height:0;">
-                        <img alt="div" src="http://sunshinewellness.de/assets/img/div.jpg">
+                        <img alt="div" src="https://sunshinewellness.de/assets/img/div.jpg">
                     </td>
                     <!-- End Left Line -->
 
@@ -1265,7 +1265,7 @@
                 <tr>
                     <td style="line-height:0;">
                         <img width="820" class="img" alt="img"
-                             src="http://sunshinewellness.de/assets/svg/gutschein1.svg">
+                             src="https://sunshinewellness.de/assets/svg/gutschein1.svg">
                     </td>
                 </tr>
 
