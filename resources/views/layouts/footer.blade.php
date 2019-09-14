@@ -20,8 +20,6 @@
                 <div class="container">
                     <div class="wrap">
                         <ul class="flex fix-10-12 ae-1 light micro">
-                            <li class="col-3-12"><p><a href="{{route('sha')}}">Sunshine Wellness Schenkenseebad</a></p></li>
-                            <li class="col-3-12"><p><a href="{{route('gelbinger')}}">Sunshine Wellness Gelbinger-Gasse</a></p></li>
                             <li class="col-3-12"><p><a href="{{route('impressum')}}">Impressum</a></p></li>
                             <li class="col-3-12"><p><a href="{{route('agb')}}">Allgemeine Geschäftsbedingungen</a></p></li>
                         </ul>
@@ -32,7 +30,7 @@
                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
                                     </svg></a>
                                 <ul class="menu margin-top-1 nav-text">
-                                    <li><span>Copyright © 2018 <a href="https://wolf-gate.com">Wolf-Gate</a> <br>
+                                    <li><span>Copyright © 2018 Sunshine Wellness <br>
                 All rights reserved.</span></li>
                                     <li>
                                         <img class="wide margin-top-4" src="{{ asset('assets/img/paypal-logos.png') }}"/>

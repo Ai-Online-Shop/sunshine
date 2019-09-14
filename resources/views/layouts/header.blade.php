@@ -240,8 +240,5 @@
         <li><a href="{{ route('termin') }}"><i class="margin-left-1 material-icons margin-right-1">event</i>Termin</a>
         </li><li><a href="{{ route('gutschein') }}"><i class="margin-left-1 material-icons margin-right-1">card_giftcard</i>Gutschein</a>
         </li>
-        <li><a href="http://wolf-gate.de">© 2017 Wolf-Gate</a>
-        </li>
-
     </ul>
 </nav>

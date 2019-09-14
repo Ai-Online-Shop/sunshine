@@ -14,22 +14,20 @@ use Illuminate\Support\Facades\Input;
 |
 */
 
-Route::get('/', ['as' => 'home', 'uses' => 'BlogController@startseite']);
-Route::get('/sha/', ['as' => 'sha', 'uses' => 'BlogController@sha']);
-Route::get('/sha/angebote', ['as' => 'sha/angebote', 'uses' => 'BlogController@angebote']);
-Route::get('/sha/team', ['as' => 'sha/team', 'uses' => 'BlogController@team']);
-Route::get('/sha/impressionen', ['as' => 'sha/impressionen', 'uses' => 'BlogController@impressionen']);
-Route::get('/sha/termin', ['as' => 'sha/termin', 'uses' => 'BlogController@termin']);
-Route::get('/sha/kontakt', ['as' => 'sha/kontakt', 'uses' => 'BlogController@kontakt']);
+//Route::get('/sha/', ['as' => 'sha', 'uses' => 'BlogController@sha']);
+//Route::get('/sha/angebote', ['as' => 'sha/angebote', 'uses' => 'BlogController@angebote']);
+//Route::get('/sha/team', ['as' => 'sha/team', 'uses' => 'BlogController@team']);
+//Route::get('/sha/impressionen', ['as' => 'sha/impressionen', 'uses' => 'BlogController@impressionen']);
+//Route::get('/sha/termin', ['as' => 'sha/termin', 'uses' => 'BlogController@termin']);
+//Route::get('/sha/kontakt', ['as' => 'sha/kontakt', 'uses' => 'BlogController@kontakt']);
 
-Route::get('/gelbinger-gasse/', ['as' => 'gelbinger', 'uses' => 'BlogController@gelbinger_sha']);
-Route::get('/gelbinger-gasse/angebote', ['as' => 'gelbinger/angebote', 'uses' => 'BlogController@gelbinger_angebote']);
-Route::get('/gelbinger-gasse/team', ['as' => 'gelbinger/team', 'uses' => 'BlogController@gelbinger_team']);
-Route::get('/gelbinger-gasse/impressionen', ['as' => 'gelbinger/impressionen', 'uses' => 'BlogController@gelbinger_impressionen']);
-Route::get('/gelbinger-gasse/termin', ['as' => 'gelbinger/termin', 'uses' => 'BlogController@gelbinger_termin']);
-Route::get('/gelbinger-gasse/kontakt', ['as' => 'gelbinger/kontakt', 'uses' => 'BlogController@gelbinger_kontakt']);
+//Route::get('/gelbinger-gasse/angebote', ['as' => 'gelbinger/angebote', 'uses' => 'BlogController@gelbinger_angebote']);
+//Route::get('/gelbinger-gasse/team', ['as' => 'gelbinger/team', 'uses' => 'BlogController@gelbinger_team']);
+//Route::get('/gelbinger-gasse/impressionen', ['as' => 'gelbinger/impressionen', 'uses' => 'BlogController@gelbinger_impressionen']);
+//Route::get('/gelbinger-gasse/termin', ['as' => 'gelbinger/termin', 'uses' => 'BlogController@gelbinger_termin']);
+//Route::get('/gelbinger-gasse/kontakt', ['as' => 'gelbinger/kontakt', 'uses' => 'BlogController@gelbinger_kontakt']);
 
-Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 Route::get('angebote', ['as' => 'angebote', 'uses' => 'FunktioniertsController@index']);
 Route::get('team', ['as' => 'team', 'uses' => 'EmpfehlungController@index']);
 Route::get('termin', ['as' => 'termin', 'uses' => 'EmpfehlungController@termin']);
@@ -157,7 +155,6 @@ Route::group(['prefix' => 'my_campaigns'], function () {
     Route::post('delete_faq', ['as' => 'delete_faq', 'uses' => 'FaqController@destroy']);
 
     //Route::get('my_campaigns', ['as'=>'my_campaigns', 'uses' => 'CampaignsController@myCampaigns']);
-
 });
 /**
  * Restricted area only for admin with middleware->admin
@@ -218,7 +215,6 @@ Route::group(['prefix' => 'payments'], function () {
     Route::get('/downloadPDF/{id}', 'PaymentController@downloadPDF');
     Route::get('status-change/{id}/{status}', ['as' => 'status_change', 'uses' => 'PaymentController@markSuccess']);
     Route::get('status-change2/{id}/{status}', ['as' => 'status_change2', 'uses' => 'PaymentController@markSuccess2']);
-
 });
 
 Route::group(['prefix' => 'withdraw'], function () {
@@ -227,7 +223,6 @@ Route::group(['prefix' => 'withdraw'], function () {
 
 
 Route::group(['prefix' => 'u'], function () {
-
     Route::get('profile', ['as' => 'profile', 'uses' => 'UserController@profile']);
     Route::get('profile/edit', ['as' => 'profile_edit', 'uses' => 'UserController@profileEdit']);
     Route::post('profile/edit', ['uses' => 'UserController@profileEditPost']);
@@ -241,7 +236,6 @@ Route::group(['prefix' => 'u'], function () {
         Route::get('change-password', ['as' => 'change_password', 'uses' => 'UserController@changePassword']);
         Route::post('change-password', 'UserController@changePasswordPost');
     });
-
 });
 
 Route::group(['prefix' => 'users'], function () {
@@ -254,6 +248,4 @@ Route::group(['prefix' => 'users'], function () {
     Route::get('edit/{id}', ['as' => 'users_edit', 'uses' => 'UserController@profileEdit']);
     Route::post('edit/{id}', ['uses' => 'UserController@profileEditPost']);
     Route::get('profile/change-avatar/{id}', ['as' => 'change_avatar', 'uses' => 'UserController@changeAvatar']);
-
-
 });
