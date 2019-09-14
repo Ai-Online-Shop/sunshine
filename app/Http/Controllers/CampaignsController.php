@@ -527,7 +527,6 @@ class CampaignsController extends Controller
         //dd(session('cart'));
         return view('admin.payment', compact(
             'title',
-            'user',
             'campaign',
             'domenic2',
             $domenic2,
