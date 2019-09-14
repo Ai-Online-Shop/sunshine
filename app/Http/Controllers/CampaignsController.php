@@ -523,19 +523,15 @@ class CampaignsController extends Controller
         $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
         $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
         $domenic7 = Gutschein::orderBy('created_at', 'desc')->first(['gutschein_id']);
-        $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email'])->email;
+        $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email']);
 
         //dd(session('cart'));
         return view('admin.payment', compact(
             'title',
             'campaign',
             'domenic2',
-            $domenic2,
-            $domenic3,
             'domenic3',
-            $domenic7,
             'domenic7',
-            $domenic6,
             'domenic6',
             'total'
         ));
