@@ -241,7 +241,6 @@ class CampaignsController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $rules = [
             'title' => 'required',
             'category' => 'required',
@@ -348,7 +347,6 @@ class CampaignsController extends Controller
         $campaign = Campaign::find($id);
         $title = trans('app.backers') . ' | ' . $campaign->title;
         return view('admin.campaign_backers', compact('campaign', 'title'));
-
     }
 
     public function showUpdates($id)
@@ -386,7 +384,6 @@ class CampaignsController extends Controller
      */
     public function addToCart(Request $request, $reward_id = 0)
     {
-
         if ($reward_id) {
             $gutschein_id = 'gutschein_' . time() . str_random(6);
             // get unique recharge transaction id
@@ -463,14 +460,11 @@ class CampaignsController extends Controller
 
     public function statusChange($id, $status = null)
     {
-
         $campaign = Campaign::find($id);
         if ($campaign && $status) {
-
             if ($status == 'approve') {
                 $campaign->status = 1;
                 $campaign->save();
-
             } elseif ($status == 'block') {
                 $campaign->status = 2;
                 $campaign->save();
@@ -480,12 +474,10 @@ class CampaignsController extends Controller
             } elseif ($status == 'add_staff_picks') {
                 $campaign->is_staff_picks = 1;
                 $campaign->save();
-
             } elseif ($status == 'remove_staff_picks') {
                 $campaign->is_staff_picks = 0;
                 $campaign->save();
             }
-
         }
         return back()->with('success', trans('app.status_updated'));
     }
@@ -497,7 +489,6 @@ class CampaignsController extends Controller
      */
     public function checkout(Request $request)
     {
-
         $domenic2 = Gutschein::orderBy('created_at', 'desc')->first(['versandart']);
         $domenic3 = Gutschein::orderBy('created_at', 'desc')->first(['amount']);
 
@@ -506,9 +497,7 @@ class CampaignsController extends Controller
         session(['cart' => [
             'total' => number_format($total, 2)]]);
 
-        return view('admin.checkout', compact('title', 'campaign', 'reward', 'user',
-            'domenic2', $domenic2, $domenic3, 'domenic3', $request, 'request', $total, 'total'));
-
+        return view('admin.checkout', compact('domenic2', 'domenic3', 'total'));
     }
 
     public function checkoutPost(Request $request)
@@ -536,8 +525,20 @@ class CampaignsController extends Controller
         $domenic6 = Gutschein::orderBy('created_at', 'desc')->first(['email'])->email;
 
         //dd(session('cart'));
-        return view('admin.payment', compact('title', 'user', 'campaign',
-            'domenic2', $domenic2, $domenic3, 'domenic3', $domenic7, 'domenic7', $domenic6, 'domenic6', 'total'));
+        return view('admin.payment', compact(
+            'title',
+            'user',
+            'campaign',
+            'domenic2',
+            $domenic2,
+            $domenic3,
+            'domenic3',
+            $domenic7,
+            'domenic7',
+            $domenic6,
+            'domenic6',
+            'total'
+        ));
     }
 
     public function sofort(Request $request)
@@ -557,7 +558,6 @@ class CampaignsController extends Controller
             $paymentUrl = Sofortueberweisung::getPaymentUrl();
             header('Location: ' . $paymentUrl);
         }
-
     }
 
     public function sofort_success(Request $request)
@@ -697,7 +697,6 @@ class CampaignsController extends Controller
             });
             $request->session()->forget('gutschein');
             return view('admin.paypal_success');
-
         }
     }
 
@@ -766,7 +765,6 @@ class CampaignsController extends Controller
             });
             $request->session()->forget('gutschein');
             return view('admin.vorkasse_success');
-
         }
     }
 
@@ -787,10 +785,32 @@ class CampaignsController extends Controller
 
 
         if (!session('cart')) {
-            return view('admin.checkout_empty', compact('title', 'user',
-                'domenic2', $domenic2, $domenic3, 'domenic3',
-                'domenic4', $domenic4, 'domenic5', $domenic5, 'domenic6', $domenic6, $domenic7, 'domenic7', $domenic8, 'domenic8', $domenic9,
-                'domenic9', $domenic10, 'domenic10', $domenic11, 'domenic11', $domenic12, 'domenic12'));
+            return view('admin.checkout_empty', compact(
+                'title',
+                'user',
+                'domenic2',
+                $domenic2,
+                $domenic3,
+                'domenic3',
+                'domenic4',
+                $domenic4,
+                'domenic5',
+                $domenic5,
+                'domenic6',
+                $domenic6,
+                $domenic7,
+                'domenic7',
+                $domenic8,
+                'domenic8',
+                $domenic9,
+                'domenic9',
+                $domenic10,
+                'domenic10',
+                $domenic11,
+                'domenic11',
+                $domenic12,
+                'domenic12'
+            ));
         }
         //Find the campaign
         $cart = session('cart');
@@ -863,8 +883,9 @@ class CampaignsController extends Controller
 
         // PayPal settings
         $paypal_action_url = "https://www.paypal.com/cgi-bin/webscr";
-        if (get_option('enable_paypal_sandbox') == 1)
+        if (get_option('enable_paypal_sandbox') == 1) {
             $paypal_action_url = "https://www.sandbox.paypal.com/cgi-bin/webscr";
+        }
 
         $paypal_email = get_option('paypal_receiver_email');
         $return_url = route('payment_success', $transaction_id);
@@ -946,7 +967,6 @@ class CampaignsController extends Controller
      */
     public function paymentStripeReceive(Request $request)
     {
-
         $user_id = null;
         if (Auth::check()) {
             $user_id = Auth::user()->id;
@@ -1025,7 +1045,6 @@ class CampaignsController extends Controller
 
     public function paymentSuccess(Request $request, $transaction_id = null)
     {
-
         $user = Auth::user();
         if ($transaction_id) {
             $payment = Payment::whereLocalTransactionId($transaction_id)->whereStatus('initial')->first();
