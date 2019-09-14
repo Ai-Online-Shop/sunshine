@@ -503,6 +503,7 @@ class CampaignsController extends Controller
     public function checkoutPost(Request $request)
     {
         $title = trans('app.checkout');
+        $campaign = '1';
 
         if (!session('cart')) {
             return view('admin.checkout_empty', compact('title', 'user'));
