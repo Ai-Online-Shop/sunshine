@@ -13,11 +13,7 @@
                                         data-popup-id="vorkasse">Vorkasse
                                 </button>
                                 <p class="fw-700 margin-bottom-1 margin-top-1 text-green">oder</p>
-                                {{ Form::open(['route'=>'sofort']) }}
-                                <button class="button wide pink small round" type="submit">
-                                    <em>SOFORT</em>
-                                </button>
-                                {{ Form::close() }}
+                        
                                 <div id="paypal-button-container"></div>
                             </div>
 
